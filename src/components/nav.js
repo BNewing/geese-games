@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Route, Router, Link } from 'react-router-dom';
 
-import Home from '../homePage/home';
-import GeeseInfo from '../geeseTypes/geese-info';
+import Home from './home';
+import GeeseInfo from './geese-info';
 
 export default class Nav extends Component {
   	render() {

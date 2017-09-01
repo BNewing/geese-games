@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Nav from '../components/nav';
+import Nav from './nav';
 import IntroText from './intro-text';
 import GooseBox from './goose-box';
-import Footer from '../components/footer';
+import Footer from './footer';
 import './geese-types.css';
 
 export default class GeeseInfo extends Component {

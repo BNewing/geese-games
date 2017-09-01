@@ -4,8 +4,8 @@ import { HashRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 
 import './index.css';
-import Home from './homePage/home';
-import GeeseInfo from './geeseTypes/geese-info';
+import Home from './components/home';
+import GeeseInfo from './components/geese-info';
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
