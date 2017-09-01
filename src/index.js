@@ -6,6 +6,8 @@ import { Route } from 'react-router';
 import './index.css';
 import Home from './components/home';
 import GeeseInfo from './components/geese-info';
+import Quiz from './components/quiz';
+
 import registerServiceWorker from './registerServiceWorker';
 
 const Root = () => {
@@ -14,6 +16,7 @@ const Root = () => {
 			<div>
 				<Route exact path="/" component={ Home } />
 				<Route path="/geese-info" component={ GeeseInfo } />
+				<Route path="/quiz" component={ Quiz } />
 			</div>
 		</HashRouter>
 	)

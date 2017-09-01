@@ -1,0 +1,10 @@
+.quiz__text {
+	text-align: center;
+	padding-top: 2rem;
+}
+
+.quiz__image {
+	padding: 5rem 0;
+	margin: auto;
+	display: block;
+}
