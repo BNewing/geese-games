@@ -1,13 +1,13 @@
 # Geese Games
 
 ## What is this app?
-This is a basic React app that I'm creating to help learn React. 
+This is a basic React app that I'm creating to help learn React. I used [create-react-app](https://github.com/facebookincubator/create-react-app) to start me off. 
 
-I also really love geese, which are totally underrated and underappreciated animals! So I thought I'd write a silly little information and quiz site about them in the process of learning about React. It's been fun so far!
+I really love geese, which are totally underrated and underappreciated animals in my opinion... So I thought I'd write a silly little information and quiz site about them, to help me learn how to use React. It's been fun so far!
 
-I was finding React a little intimidating and overwhelming, so I bought Wes Bos' [reactforbeginners.com](reactforbeginners.com) course with training budget to get me started and then branched out to this with lots of help from the Facebook documentation. Really recommend those things if you're starting out learning React!
+I was finding React a little intimidating and overwhelming, and I was really struggling to get to grips with it. After asking around, I was recommended and then got Wes Bos' [reactforbeginners.com](reactforbeginners.com) course to get me started. That has been fantastic! Then, when I started up this project, I often referred to the [Facebook documentation](https://facebook.github.io/react/docs/hello-world.html). Really recommend those resources!
 
-I used [create-react-app](https://github.com/facebookincubator/create-react-app) to start me off. 
+This is still very much a work in progress but it's fun and I'm learning lots!
 
 
 ## Tech Stack
