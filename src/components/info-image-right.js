@@ -6,7 +6,7 @@ export default class InfoImageRight extends Component {
       <div className="info-image-right clearfix">
         <div className="info-image-right--text">
           <h2 className="info-image-right--text__header">Why make this?</h2>
-          <p className="info-image-right--text__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> 
+          <p className="info-image-right--text__text">I've always really liked angry animals, and whilst at university I often used to sit and watch the geese at the big lake on campus. It was one of my happy things and ever since, I've had a fondness for them. I used to like seeing how the habbits of the geese changed throughout the year, and after going to St James's park, I realised that there were loads of other types of geese beyond Canada geese. So I've decided to create this site as a light-hearted learning activity so that I learn more about geese, and also learn React and Redux at the same time.</p> 
           <button className="info-image-right--text__button">More info</button>
         </div>      
         <div className="info-image-right--image">
