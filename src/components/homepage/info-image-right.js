@@ -10,7 +10,8 @@ export default class InfoImageRight extends Component {
           <button className="info-image-right--text__button">More info</button>
         </div>      
         <div className="info-image-right--image">
-          <img className="info-image-right--image__image" src="https://thumb1.shutterstock.com/display_pic_with_logo/488002/524660629/stock-photo-geese-on-green-meadow-geese-and-goose-group-of-gray-geese-524660629.jpg" />
+          <img className="info-image-right--image__image" src="https://thumb1.shutterstock.com/display_pic_with_logo/488002/524660629/stock-photo-geese-on-green-meadow-geese-and-goose-group-of-gray-geese-524660629.jpg" 
+          alt="Cute goose" />
         </div>
       </div>
     );

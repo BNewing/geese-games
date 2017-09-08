@@ -5,7 +5,7 @@ export default class InfoImageLeft extends Component {
     return (
       <div className="info-image-left clearfix">
       	<div className="info-image-left--image">
-          <img className="info-image-left--image__image" src="https://thumb1.shutterstock.com/display_pic_with_logo/488002/524660629/stock-photo-geese-on-green-meadow-geese-and-goose-group-of-gray-geese-524660629.jpg" />
+          <img className="info-image-left--image__image" src="https://thumb1.shutterstock.com/display_pic_with_logo/488002/524660629/stock-photo-geese-on-green-meadow-geese-and-goose-group-of-gray-geese-524660629.jpg" alt="Cute goose" />
         </div>
         <div className="info-image-left--text">
           <h2 className="info-image-left--text__header">What is this website?</h2>
