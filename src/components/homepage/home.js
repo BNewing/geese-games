@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import Nav from './nav';
-import Header from './header';
+
+import Nav from '../common/nav';
+import Header from '../common/header';
 import InfoImageLeft from './info-image-left';
 import InfoImageRight from './info-image-right';
-import Footer from './footer';
+import Footer from '../common/footer';
 import './home.css';
 
 export default class Home extends Component {

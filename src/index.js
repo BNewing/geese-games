@@ -4,9 +4,9 @@ import { HashRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 
 import './index.css';
-import Home from './components/home';
-import GeeseInfo from './components/geese-info';
-import Quiz from './components/quiz';
+import Home from './components/homepage/home';
+import GeeseInfo from './components/geeseInfo/geese-info';
+import Quiz from './components/quiz/quiz';
 
 import registerServiceWorker from './registerServiceWorker';
 
