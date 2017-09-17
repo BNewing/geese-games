@@ -4,7 +4,7 @@ import Nav from '../common/nav';
 import IntroText from './intro-text';
 import GooseBox from './goose-box';
 import Footer from '../common/footer';
-import './geese-types.css';
+import './geeseInfo.css';
 
 export default class GeeseInfo extends Component {
   render() {

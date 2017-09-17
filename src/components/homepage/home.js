@@ -5,7 +5,7 @@ import Header from '../common/header';
 import InfoImageLeft from './info-image-left';
 import InfoImageRight from './info-image-right';
 import Footer from '../common/footer';
-import './home.css';
+import './homepage.css';
 
 export default class Home extends Component {
   render() {
