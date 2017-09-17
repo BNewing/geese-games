@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
 import { Route, Router, Link } from 'react-router-dom';
-import './common.css';
+
+import styled from 'styled-components';
+
+const Wrapper = styled.nav `
+	background-color: #F8E1A3;
+	height: 100%;
+	margin: 0;
+	padding: 16px;
+`
+
+const LinkWrapper = styled.li `
+	list-style-type: none;
+	display: inline-block;
+	width: 33%;
+	text-align: center;
+	color: #817A96;
+`
+
+const StyledLink = styled(Link) `
+	text-decoration: none;
+	color: #000000;
+	font-size: 25px;
+`
 
 export default class Nav extends Component {
   	render() {
 	    return (
 	    	<nav>
-		     	<ul className="nav">
-		        	<li className="nav--link"><Link to="/">Home</Link></li>
-		        	<li className="nav--link"><Link to="/geese-info">Geese Info</Link></li>
-		        	<li className="nav--link"><Link to="/quiz">Quiz</Link></li>
-		      	</ul>
+		     	<Wrapper>
+		        	<LinkWrapper><StyledLink to="/">Home</StyledLink></LinkWrapper>
+		        	<LinkWrapper><StyledLink to="/geese-info">Geese Info</StyledLink></LinkWrapper>
+		        	<LinkWrapper><StyledLink to="/quiz">Quiz</StyledLink></LinkWrapper>
+		      	</Wrapper>
 		   	</nav>
     );
   }
