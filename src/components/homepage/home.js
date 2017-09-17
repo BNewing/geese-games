@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Nav from '../common/nav';
-import Header from '../common/header';
+import Header from './header';
 import InfoImageLeft from './info-image-left';
 import InfoImageRight from './info-image-right';
 import Footer from '../common/footer';
