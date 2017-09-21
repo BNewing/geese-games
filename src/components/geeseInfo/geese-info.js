@@ -4,14 +4,19 @@ import Nav from '../common/nav';
 import IntroText from './intro-text';
 import GooseBox from './goose-box';
 import Footer from '../common/footer';
-import './geeseInfo.css';
+import styled from 'styled-components';
+
+const PageWrapper = styled.div `
+  width: 80%;
+  margin: auto;
+`
 
 export default class GeeseInfo extends Component {
   render() {
     return (
       <div>
       	<Nav />	
-      	<div className="container">
+      	<PageWrapper>
         	<IntroText /> 
         	<GooseBox 
         		text="Canada Goose" 
@@ -58,7 +63,7 @@ export default class GeeseInfo extends Component {
       			image="https://thumb9.shutterstock.com/display_pic_with_logo/2270711/187360778/stock-photo-bean-goose-187360778.jpg"
             alt="Canada Goose" />
 
-      	</div>
+      	</PageWrapper>
       <Footer />
       </div>
 
