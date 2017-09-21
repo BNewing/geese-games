@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div `	
-	width: 30%;
-	padding: 5px;
+	width: 25%;
+	padding: 2% 4%;
 	display:inline-block;
 `
 
