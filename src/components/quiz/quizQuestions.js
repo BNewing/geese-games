@@ -1,24 +1,10 @@
-var quizQuestions = [
+const quizQuestions = [
 
 	{
 		question: "What type of goose is this?",
 		image: "https://thumb9.shutterstock.com/display_pic_with_logo/873577/555906772/stock-photo-greylag-goose-open-the-wings-on-the-water-surface-555906772.jpg",
 		correctAnswer: "Greylag goose",
-		answers: [
-			{
-				type: "Brent goose"
-			},
-			{
-				type: "Canada goose"
-			},
-			{
-				type: "Greylag goose"
-			},
-			{
-				type: "Bean goose" 
-			}
-
-		]
+		answers: ["Brent goose", "Canada goose", "Greylag goose", "Bean goose"]
 	},
 	{
 		question: "What type of goose is this?",
@@ -180,3 +166,5 @@ var quizQuestions = [
 		]
 	}
 ]
+
+export default quizQuestions;

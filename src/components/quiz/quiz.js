@@ -27,6 +27,7 @@ export default class GeeseInfo extends Component {
        counter: 0,
        questionId: 1,
        question: '',
+       image: '',
        answerOptions: [],
        answer: '',
        correctAnswers: '',
@@ -35,35 +36,30 @@ export default class GeeseInfo extends Component {
     };
 
     componentWillMount(){
-      const answerOptions = quizQuestions.map((question[0].answer));
-
       this.setState({
         question: quizQuestions[0].question,
-        answerOptions: answerOptions[0]
+        image: quizQuestions[0].image,
+        answerOptions: quizQuestions[0].answers
       });
     }
 
     
-    renderAnswerOptions(){
-      return (
-        <AnswerOption
-          answer={this.state.answer}
-          questionId={this.state.questionId}
-        />
-    )}
-
     render() {
 
       return (
         <div>
         	<Nav />	
-            <Question 
-              question={this.state.question}/>
+            
             <QuestionCounter 
               counter={this.state.questionId} 
-              total={this.state.questionQuestions.length} />
+              total={10} />
+            <Question 
+              question={this.state.question}/>
+            <img src={this.state.image} alt="goose" />
             <ul>
-              {this.state.answerOptions.map(this.renderAnswerOptions)}
+            {console.log(this.state.answerOptions)}
+            {this.state.answerOptions.map((item,i) => <li key={i}>{item}</li>)}
+            
             </ul>
           <Footer />
         </div>
