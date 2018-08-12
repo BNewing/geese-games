@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Nav from '../common/nav';
 import Footer from '../common/footer';
-
 import styled from 'styled-components';
+import Question from './question';
 
 const Text = styled.p `
   text-align: center;
-  padding-top: 2rem;`
+  padding-top: 2rem;
+`
 
 const Image = styled.img `
   padding: 5rem 0;
@@ -24,7 +25,11 @@ export default class GeeseInfo extends Component {
           <Image 
             src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" 
             alt="Gif of little goslings running across the screen" />
+          
+          <Question />
+
           <Footer />
+
       </div>
 
     );
