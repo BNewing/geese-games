@@ -4,7 +4,7 @@ export default class Question extends Component {
   render() {
     return (
     	<div>
-	      <h2>Goose Question</h2>
+	      <h2>{this.props.content}</h2>
 	    </div>
     );
   }
