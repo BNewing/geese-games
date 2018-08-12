@@ -7,7 +7,6 @@ I really love geese, which are totally underrated and underappreciated animals i
 
 I was finding React a little intimidating and overwhelming, and I was really struggling to get to grips with it. After asking around, I was recommended and then got Wes Bos' [reactforbeginners.com](reactforbeginners.com) course to get me started. That has been fantastic! Then, when I started up this project, I often referred to the [Facebook documentation](https://facebook.github.io/react/docs/hello-world.html). 
 
-This is still very much a work in progress but it's fun and I'm learning lots!
 
 ## Tech Stack
 - React
