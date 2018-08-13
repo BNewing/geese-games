@@ -37,16 +37,25 @@ export default class GeeseInfo extends Component {
        correctAnswers: '',
        result: ''
       };
+
+      this.loadNextQuestion = this.loadNextQuestion.bind(this);
     };
 
     componentWillMount(){
       this.setState({
-        question: quizQuestions[0].question,
-        image: quizQuestions[0].image,
-        answerOptions: quizQuestions[0].answers
+        question: quizQuestions[this.state.counter].question,
+        image: quizQuestions[this.state.counter].image,
+        answerOptions: quizQuestions[this.state.counter].answers
       });
     }
 
+    loadNextQuestion() {
+      this.setState({ 
+        counter: this.state.counter + 1,  
+        questionId: this.state.questionId +1,
+        answerOptions: quizQuestions[this.state.counter].answers
+      });
+    }
     
     render() {
 
@@ -63,6 +72,7 @@ export default class GeeseInfo extends Component {
             <ul>
               {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} />)}
             </ul>
+            <button onClick={this.loadNextQuestion}>Submit</button>
           <Footer />
         </PageWrapper>
 
