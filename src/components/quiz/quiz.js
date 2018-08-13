@@ -19,6 +19,10 @@ const Image = styled.img `
   display: block;
 `
 
+const PageWrapper = styled.div `
+  display: block;
+  text-align: center;
+`
 
 export default class GeeseInfo extends Component {
   constructor(props) {
@@ -47,7 +51,7 @@ export default class GeeseInfo extends Component {
     render() {
 
       return (
-        <div>
+        <PageWrapper>
         	<Nav />	
             
             <QuestionCounter 
@@ -57,12 +61,10 @@ export default class GeeseInfo extends Component {
               question={this.state.question}/>
             <img src={this.state.image} alt="goose" />
             <ul>
-            {console.log(this.state.answerOptions)}
-            {this.state.answerOptions.map((item,i) => <li key={i}>{item}</li>)}
-            
+              {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} />)}
             </ul>
           <Footer />
-        </div>
+        </PageWrapper>
 
     );
   }

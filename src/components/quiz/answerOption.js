@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const ListItem = styled.li `
+  list-style: none;
+`
 
 export default class AnswerOption extends Component {
   render() {
     return (
-	   	<li className="answerOption">
+	   	<ListItem>
 	        <input
 	          type="radio"
 	          className="radioCustomButton"
 	          name="radioGroup"
-	          checked={this.props.answerType === this.props.answer}
 	          id={this.props.answer}
 	          value={this.props.answer}
 	        />
 	        <label className="radioCustomLabel" htmlFor={this.props.answer}>
 	          {this.props.answer}
 	        </label>
-	      </li>
+	      </ListItem>
     );
   }
 }
