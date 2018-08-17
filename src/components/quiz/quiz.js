@@ -39,6 +39,7 @@ export default class GeeseInfo extends Component {
       };
 
       this.loadNextQuestion = this.loadNextQuestion.bind(this);
+      this.checkAnswer = this.checkAnswer.bind(this);
     };
 
     componentWillMount(){
@@ -49,10 +50,18 @@ export default class GeeseInfo extends Component {
       });
     }
 
+    checkAnswer(){
+      this.loadNextQuestion();
+      console.log(this.state);
+    }
+
     loadNextQuestion() {
+
       this.setState({ 
         counter: this.state.counter + 1,  
         questionId: this.state.questionId +1,
+        image: quizQuestions[this.state.counter].image,
+        question: quizQuestions[this.state.counter].question,
         answerOptions: quizQuestions[this.state.counter].answers
       });
     }
@@ -65,14 +74,15 @@ export default class GeeseInfo extends Component {
             
             <QuestionCounter 
               counter={this.state.questionId} 
-              total={10} />
+              total={quizQuestions.length} />
             <Question 
               question={this.state.question}/>
             <img src={this.state.image} alt="goose" />
             <ul>
+
               {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} />)}
             </ul>
-            <button onClick={this.loadNextQuestion}>Submit</button>
+            <button onClick={this.checkAnswer}>Submit</button>
           <Footer />
         </PageWrapper>
 
