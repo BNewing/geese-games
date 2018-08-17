@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://bnewing.github.io/geese-games",
   "dependencies": {
+    "node-mime": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "styled-components": "^2.4.1"
