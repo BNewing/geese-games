@@ -7,14 +7,6 @@ I really love geese, which are totally underrated and underappreciated animals i
 - React
 - Styled-components
 
-## Screenshots
-
-Homepage:
-<img alt="homepage" src="./src/images/homepage.png" />
-
-Geese info page:
-<img alt="geese info page" src="./src/images/geeseInfoPage.png" />
-
 ## Resources
 
 After asking around, I was recommended and then got Wes Bos' [reactforbeginners.com](reactforbeginners.com) course to get me started. Then, when I started up this project, I often referred to the [Facebook documentation](https://facebook.github.io/react/docs/hello-world.html). I used [create-react-app](https://github.com/facebookincubator/create-react-app) to start me off. 
@@ -24,3 +16,11 @@ After asking around, I was recommended and then got Wes Bos' [reactforbeginners.
 
 ## Issues
 If you see any issues with my code, please do raise issues on the repo! Any feedback or tips are greatly appreciated =) 
+
+## Screenshots
+
+Homepage:
+<img alt="homepage" src="./src/images/homepage.png" />
+
+Geese info page:
+<img alt="geese info page" src="./src/images/geeseInfoPage.png" />
