@@ -52,7 +52,6 @@ export default class GeeseInfo extends Component {
 
     checkAnswer(){
       this.loadNextQuestion();
-      console.log(this.state);
     }
 
     loadNextQuestion() {
@@ -62,10 +61,17 @@ export default class GeeseInfo extends Component {
         questionId: this.state.questionId +1,
         image: quizQuestions[this.state.counter].image,
         question: quizQuestions[this.state.counter].question,
-        answerOptions: quizQuestions[this.state.counter].answers
+        answerOptions: quizQuestions[this.state.counter].answers,
       });
     }
     
+    optionSelected(e) {
+      console.log(this.state);
+      this.setState({
+        selectedAnswer: e
+      })
+    }
+
     render() {
 
       return (
@@ -79,8 +85,7 @@ export default class GeeseInfo extends Component {
               question={this.state.question}/>
             <img src={this.state.image} alt="goose" />
             <ul>
-
-              {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} />)}
+              {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} handleChange={e=>this.optionSelected(e)}/>)}
             </ul>
             <button onClick={this.checkAnswer}>Submit</button>
           <Footer />

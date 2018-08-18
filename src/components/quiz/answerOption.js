@@ -6,6 +6,15 @@ const ListItem = styled.li `
 `
 
 export default class AnswerOption extends Component {
+	constructor(props) {
+		super(props);
+		this.updateSelectedOption = this.updateSelectedOption.bind(this);
+	}
+
+	updateSelectedOption(e) {
+		this.props.handleChange(e.target.value);
+		//console.log(e.target.value)
+	}
   render() {
     return (
 	   	<ListItem>
@@ -15,6 +24,7 @@ export default class AnswerOption extends Component {
 	          name="radioGroup"
 	          id={this.props.answer}
 	          value={this.props.answer}
+	          onChange={this.updateSelectedOption}
 	        />
 	        <label className="radioCustomLabel" htmlFor={this.props.answer}>
 	          {this.props.answer}
