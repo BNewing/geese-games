@@ -35,7 +35,8 @@ export default class GeeseInfo extends Component {
        answerOptions: [],
        answer: '',
        correctAnswers: '',
-       result: ''
+       result: '',
+       selectedAnswer: ''
       };
 
       this.loadNextQuestion = this.loadNextQuestion.bind(this);
@@ -66,10 +67,11 @@ export default class GeeseInfo extends Component {
     }
     
     optionSelected(e) {
-      console.log(this.state);
+      
       this.setState({
         selectedAnswer: e
       })
+      console.log(this.state);
     }
 
     render() {
