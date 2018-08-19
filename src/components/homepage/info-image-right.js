@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Router, Link } from 'react-router-dom';
-
 import styled from 'styled-components';
 
 const ComponentWrapper = styled.div `
@@ -32,15 +30,6 @@ const TextWrapper = styled.div `
   display: inline-block;
   width: 60%;
   float: left;
-`
-
-const Button = styled.button `
-  font-size: 18px;
-  background-color: #C0E6E2;
-  margin: 5px;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-align: center;
 `
 
 

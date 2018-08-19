@@ -18,7 +18,7 @@ export default class Footer extends Component {
 	    return (
 	    	<div>
 		    	<Wrapper>
-			     	<Text>Copyright Beverley Newing, 2017 </Text>
+			     	<Text>&#169; Beverley Newing, 2018 </Text>
 			   	</Wrapper>
 		   	</div>
     	);
