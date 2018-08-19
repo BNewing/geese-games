@@ -16,3 +16,11 @@ After asking around, I was recommended and then got Wes Bos' [reactforbeginners.
 
 ## Issues
 If you see any issues with my code, please do raise issues on the repo! Any feedback or tips are greatly appreciated =) 
+
+## Screenshots
+
+Homepage:
+<img alt="homepage" src="./src/images/homepage.png" />
+
+Geese info page:
+<img alt="geese info page" src="./src/images/geeseInfoPage.png" />
