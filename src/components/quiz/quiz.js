@@ -19,6 +19,19 @@ const PageWrapper = styled.div `
   text-align: center;
 `
 
+const Button = styled.button `
+  font-size: 18px;
+  background-color: #C0E6E2;
+  margin: 0 auto;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+`
+
+const List = styled.ul `
+  padding: 0;
+`
+
 export default class GeeseInfo extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +45,6 @@ export default class GeeseInfo extends Component {
        selectedAnswer: '',
        numberCorrectAnswers: 0,
     };
-
       this.loadNextQuestion = this.loadNextQuestion.bind(this);
       this.checkAnswer = this.checkAnswer.bind(this);
       this.optionSelected = this.optionSelected.bind(this);
@@ -42,10 +54,10 @@ export default class GeeseInfo extends Component {
       this.setState({
         question: quizQuestions[this.state.counter].question,
         image: quizQuestions[this.state.counter].image,
-        correctAnswer: quizQuestions[this.state.counter].correctAnswer,
-        answerOptions: quizQuestions[this.state.counter].answers
-      });
-    }
+        answerOptions: quizQuestions[this.state.counter].answers,
+        correctAnswer: quizQuestions[this.state.counter].correctAnswer
+      });        
+    };
 
     checkAnswer(){
       if (this.state.selectedAnswer === this.state.correctAnswer) {
@@ -55,7 +67,7 @@ export default class GeeseInfo extends Component {
       }
       this.loadNextQuestion();
       console.log(this.state);
-    }
+    };
 
     loadNextQuestion() {
       this.setState({ 
@@ -67,16 +79,15 @@ export default class GeeseInfo extends Component {
         answerOptions: quizQuestions[this.state.counter].answers,
         selectedAnswer: ''
       });
-    }
+    };
     
     optionSelected(e) { 
       this.setState({
         selectedAnswer: e
       })
-    }
+    };
 
     render() {
-
       return (
         <PageWrapper>
         	<Nav />	
@@ -86,13 +97,12 @@ export default class GeeseInfo extends Component {
             <Question 
               question={this.state.question}/>
             <Image src={this.state.image} alt="goose" />
-            <ul>
+            <List>
               {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} handleChange={e=>this.optionSelected(e)}/>)}
-            </ul>
-            <button onClick={this.checkAnswer}>Submit</button>
+            </List>
+            <Button onClick={this.checkAnswer}>Submit answer</Button>
           <Footer />
         </PageWrapper>
-
     );
   }
 }
