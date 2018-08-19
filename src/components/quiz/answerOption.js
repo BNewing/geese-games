@@ -13,23 +13,21 @@ export default class AnswerOption extends Component {
 
 	updateSelectedOption(e) {
 		this.props.handleChange(e.target.value);
-		//console.log(e.target.value)
 	}
-  render() {
-    return (
-	   	<ListItem>
-	        <input
-	          type="radio"
-	          className="radioCustomButton"
-	          name="radioGroup"
-	          id={this.props.answer}
-	          value={this.props.answer}
-	          onChange={this.updateSelectedOption}
-	        />
-	        <label className="radioCustomLabel" htmlFor={this.props.answer}>
-	          {this.props.answer}
-	        </label>
-	      </ListItem>
-    );
-  }
+    render() {
+	    return (
+		   	<ListItem>
+		        <input
+		          type="radio"
+		          name="radioGroup"
+		          id={this.props.answer}
+		          value={this.props.answer}
+		          onChange={this.updateSelectedOption}
+		        />
+		        <label htmlFor={this.props.answer}>
+		          {this.props.answer}
+		        </label>
+		      </ListItem>
+	    );
+	}
 }

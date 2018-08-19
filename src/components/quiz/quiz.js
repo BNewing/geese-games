@@ -15,12 +15,11 @@ const Image = styled.img `
 `
 
 const PageWrapper = styled.div `
-  display: block;
   text-align: center;
 `
 
 const Button = styled.button `
-  font-size: 18px;
+  font-size: 1.125rem;
   background-color: #C0E6E2;
   margin: 0 auto;
   padding: 12px 24px;
@@ -65,11 +64,26 @@ export default class GeeseInfo extends Component {
           numberCorrectAnswers: this.state.numberCorrectAnswers +1
         })
       }
-      this.loadNextQuestion();
+      
+      if (!this.state.questionId < quizQuestions.length) {
+          console.log("true");
+          this.loadNextQuestion();
+          //this if statement doesn't work at all for some reason, and crashes the app if I put sorting code in it
+          // This means that at the moment, when you click the button the last question, the app crashes because it can't get more data
+      } else {
+        this.setState ({
+          image: '',
+          question: '',
+          answerOptions: '',
+        })
+        
+      }
       console.log(this.state);
     };
 
     loadNextQuestion() {
+      // For some reason, the first question data gets shown twice, but the counter still increases - so the final question number ends up being 10
+      // The focus on one radio button isn't being removed between screens
       this.setState({ 
         counter: this.state.counter + 1,  
         questionId: this.state.questionId +1,
@@ -91,6 +105,7 @@ export default class GeeseInfo extends Component {
       return (
         <PageWrapper>
         	<Nav />	
+            {this.state.questionId > quizQuestions.length ? (<p>Quiz completed! You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p>) : (<p>Quiz not completed</p>)}
             <QuestionCounter 
               counter={this.state.questionId} 
               total={quizQuestions.length} />
