@@ -54,6 +54,7 @@ export default class GeeseInfo extends Component {
       this.loadNextQuestion = this.loadNextQuestion.bind(this);
       this.checkAnswer = this.checkAnswer.bind(this);
       this.optionSelected = this.optionSelected.bind(this);
+      this.updateCounter = this.updateCounter.bind(this);
     };
 
     componentWillMount(){
@@ -66,13 +67,18 @@ export default class GeeseInfo extends Component {
       console.log(this.state);
     };
 
+    componentDidMount(){
+      this.setState((state) => ({ counter: this.state.counter + 1 }));
+    }
+
     checkAnswer(){
+      this.updateCounter();
       if (this.state.selectedAnswer === this.state.correctAnswer) {
-        this.setState({
+        this.setState((state) => ({
           numberCorrectAnswers: this.state.numberCorrectAnswers +1
-        })
+        }))
       }
-      alert("You chose " + this.state.selectedAnswer + ", and the correct answer: " + this.state.correctAnswer);
+      alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
       
       if (this.state.questionId < quizQuestions.length) {
           console.log(this.state.questionId, quizQuestions.length);
@@ -89,18 +95,21 @@ export default class GeeseInfo extends Component {
       console.log(this.state);
     };
 
+    updateCounter() {
+      this.setState((state) => ({ counter: this.state.counter + 1 }));
+    }
+
     loadNextQuestion() {
       // The first question data gets shown twice, but the counter still increases - so the final question number ends up being 10
       // The focus on one radio button isn't being removed between screens
-      this.setState({ 
-        counter: this.state.counter + 1,  
+      this.setState((state) => ({  
         questionId: this.state.questionId +1,
         image: quizQuestions[this.state.counter].image,
         question: quizQuestions[this.state.counter].question,
         correctAnswer: quizQuestions[this.state.counter].correctAnswer,
         answerOptions: quizQuestions[this.state.counter].answers,
         selectedAnswer: ''
-      });
+      }));
     };
     
     optionSelected(e) { 
