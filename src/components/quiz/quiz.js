@@ -118,9 +118,8 @@ export default class GeeseInfo extends Component {
               counter={this.state.questionId} 
               total={quizQuestions.length} />
               )}
-            <Question 
-              question={this.state.question}/>
-            {this.state.quizCompleted ? (<p>Alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
+            {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
+            {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
             <List>
               {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} handleChange={e=>this.optionSelected(e)}/>)}
             </List>
