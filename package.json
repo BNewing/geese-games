@@ -2,7 +2,7 @@
   "name": "geese-games",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bnewing.github.io/geese-games",
+  "homepage": "https://webdevbev.co.uk/geese-games",
   "dependencies": {
     "node-mime": "^1.0.0",
     "npm": "^6.4.0",
