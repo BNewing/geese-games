@@ -56,6 +56,7 @@ export default class GeeseInfo extends Component {
         answerOptions: quizQuestions[this.state.counter].answers,
         correctAnswer: quizQuestions[this.state.counter].correctAnswer
       });        
+      console.log(this.state);
     };
 
     checkAnswer(){
@@ -64,12 +65,12 @@ export default class GeeseInfo extends Component {
           numberCorrectAnswers: this.state.numberCorrectAnswers +1
         })
       }
+      setTimeout(alert("Correct answer: " + this.state.correctAnswer), 3000);
       
       if (!this.state.questionId < quizQuestions.length) {
-          console.log("true");
+          console.log(this.state.questionId, quizQuestions.length);
           this.loadNextQuestion();
-          //this if statement doesn't work at all for some reason, and crashes the app if I put sorting code in it
-          // This means that at the moment, when you click the button the last question, the app crashes because it can't get more data
+          //this if statement doesn't ever trigger false
       } else {
         this.setState ({
           image: '',
@@ -82,7 +83,7 @@ export default class GeeseInfo extends Component {
     };
 
     loadNextQuestion() {
-      // For some reason, the first question data gets shown twice, but the counter still increases - so the final question number ends up being 10
+      // The first question data gets shown twice, but the counter still increases - so the final question number ends up being 10
       // The focus on one radio button isn't being removed between screens
       this.setState({ 
         counter: this.state.counter + 1,  
