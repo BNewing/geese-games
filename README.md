@@ -24,3 +24,6 @@ Homepage:
 
 Geese info page:
 <img alt="geese info page" src="./src/images/geeseInfoPage.png" />
+
+Quiz page:
+<img alt="quiz page" src="./src/images/quiz.png" />
