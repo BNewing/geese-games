@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import { Route } from 'react-router';
@@ -10,16 +10,22 @@ import Quiz from './components/quiz/quiz';
 
 import registerServiceWorker from './registerServiceWorker';
 
-const Root = () => {
-	return (
-		<HashRouter>
-			<div>
-				<Route exact path="/" component={ Home } />
-				<Route path="/geese-info" component={ GeeseInfo } />
-				<Route path="/quiz" component={ Quiz } />
-			</div>
-		</HashRouter>
-	)
+export default class Root extends Component {
+	componentDidMount(){
+	    document.title = "Geese Games"
+	  }
+	render() {
+		return (
+			<HashRouter>
+				<div>
+					<Route exact path="/" component={ Home } />
+					<Route path="/geese-info" component={ GeeseInfo } />
+					<Route path="/quiz" component={ Quiz } />
+				</div>
+			</HashRouter>
+		)
+	}
+
 }
 
 
