@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DocumentTitle from 'react-document-title';
 
 import Nav from '../common/nav';
 import Header from './header';
@@ -17,16 +18,18 @@ const Wrapper = styled.div `
 export default class Home extends Component {
   render() {
     return (
-      <div>
-      	<Nav />
-      	<Header />
-      	<Wrapper>
-        	<InfoImageLeft />
-        	<InfoImageRight />
-        </Wrapper>
-        <Footer />
+      <DocumentTitle title="Home || Geese Games">
+        <div>
+        	<Nav />
+        	<Header />
+        	<Wrapper>
+          	<InfoImageLeft />
+          	<InfoImageRight />
+          </Wrapper>
+          <Footer />
 
-      </div>
+        </div>
+      </DocumentTitle>
     );
   }
 }

@@ -3,6 +3,7 @@ import Nav from '../common/nav';
 import Footer from '../common/footer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import DocumentTitle from 'react-document-title';
 
 import Question from './question';
 import QuestionCounter from './questionCounter';
@@ -120,22 +121,24 @@ export default class GeeseInfo extends Component {
 
     render() {
       return (
-        <PageWrapper>
-        	<Nav />	
-            {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
-            <QuestionCounter 
-              counter={this.state.questionId} 
-              total={quizQuestions.length} />
-              )}
-            {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
-            {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
-            <List>
-              {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} handleChange={e=>this.optionSelected(e)}/>)}
-            </List>
-            {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
-            <Button onClick={this.checkAnswer}>Submit answer</Button>)}
-          <Footer />
-        </PageWrapper>
+        <DocumentTitle title="Quiz || Geese Games">
+          <PageWrapper>
+          	<Nav />	
+              {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
+              <QuestionCounter 
+                counter={this.state.questionId} 
+                total={quizQuestions.length} />
+                )}
+              {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
+              {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
+              <List>
+                {this.state.answerOptions.map((item,i) => <AnswerOption key={i} answer={item} handleChange={e=>this.optionSelected(e)}/>)}
+              </List>
+              {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
+              <Button onClick={this.checkAnswer}>Submit answer</Button>)}
+            <Footer />
+          </PageWrapper>
+        </DocumentTitle>
     );
   }
 }

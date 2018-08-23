@@ -11,9 +11,6 @@ import Quiz from './components/quiz/quiz';
 import registerServiceWorker from './registerServiceWorker';
 
 export default class Root extends Component {
-	componentDidMount(){
-	    document.title = "Geese Games"
-	  }
 	render() {
 		return (
 			<HashRouter>
