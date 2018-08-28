@@ -106,6 +106,7 @@ export default class GeeseInfo extends Component {
       <DocumentTitle title="Quiz || Geese Games">
         <PageWrapper>
         	<Nav />	
+          // { this.state.quizCompleted ? <QuizResults numberCorrectAnswers="" : <QuizQuestions counter=""/> }
             {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
             <QuestionCounter 
               counter={this.state.questionId} 
