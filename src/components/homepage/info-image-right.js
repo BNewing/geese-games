@@ -40,7 +40,7 @@ export default class InfoImageRight extends Component {
       <ComponentWrapper>
         <TextWrapper>
           <h2>Why make this?</h2>
-          <p>At uni, I often used to sit and watch the Canada geese at the big lake on campus, and it became one of my happy things. I later visited St James Park in London, and saw lots of funky geese types there that I didn't recognise. So, I figured that could be fun content for a learning project. Geese are totally underrated.</p> 
+          <p>I've always really liked angry animals, and whilst at university I often used to sit and watch the geese at the big lake on campus. It was one of my happy things and ever since, I've had a fondness for them. I used to like seeing how the habbits of the geese changed throughout the year, and after going to St James's park, I realised that there were loads of other types of geese beyond Canada geese. So, I figured that could be fun content for a learning project. Geese are totally underrated.</p> 
         </TextWrapper>      
         <ImageWrapper>
           <Image src="https://thumb1.shutterstock.com/display_pic_with_logo/488002/524660629/stock-photo-geese-on-green-meadow-geese-and-goose-group-of-gray-geese-524660629.jpg" 
