@@ -42,7 +42,9 @@ export default class InfoImageLeft extends Component {
         </ImageWrapper>
         <TextWrapper>
           <h2>What is this website?</h2>
-          <p className="info-image-left--text__text">This is a website built with React and that I've designed myself. It's a fun little side project. Check out different types of geese on the 'Geese Info' and then test out what you've learnt on the 'Quiz' page! </p>
+            <p>This site is an educational resource with a quiz - check out different types of geese on the 'Geese Info' and then test out what you've learnt on the 'Quiz' page! </p>
+            <p>Technology-wise, this is a web app that I've built with React and designed myself. It's a fun little side project where I test out new technologies like styled-components, and practise bits of JavaScript that I'd like to get better at.</p>
+          
         </TextWrapper>
       </ComponentWrapper>
     );
