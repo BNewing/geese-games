@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
 import styled from 'styled-components';
-
 
 const ComponentWrapper = styled.div `
 :before,
@@ -26,7 +23,7 @@ const Image = styled.img `
   float:left;
   border-radius: 50%;
   width: 100%;
-  padding: 80px 0;
+  padding: 3em 0;
 `
 
 const TextWrapper = styled.div `
@@ -35,19 +32,6 @@ const TextWrapper = styled.div `
   float:right;
 `
 
-const Button = styled.button `
-  font-size: 18px;
-  background-color: #C0E6E2;
-  margin: 5px;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-align: center;
-`
-
-const StyledLink = styled(Link) `
-  text-decoration: none;
-  color: black;
-`
 
 export default class InfoImageLeft extends Component {
   render() {
@@ -58,9 +42,7 @@ export default class InfoImageLeft extends Component {
         </ImageWrapper>
         <TextWrapper>
           <h2>What is this website?</h2>
-          <p className="info-image-left--text__text">This is a website built with React and (coming soon) Redux that I've build and designed myself. The 'Geese Info' page tells you all about different types of geese, and then on the quiz page, you get to test what you've learnt. It's a hobby website, and I add in functionality when I get the chance.</p>
-          <Button><StyledLink to="geese-info">Learn About Geese</StyledLink></Button>
-          <Button><StyledLink to="/quiz">Quiz</StyledLink></Button>
+          <p className="info-image-left--text__text">This is a website built with React and that I've designed myself. It's a fun little side project. Check out different types of geese on the 'Geese Info' and then test out what you've learnt on the 'Quiz' page! </p>
         </TextWrapper>
       </ComponentWrapper>
     );
