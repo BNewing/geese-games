@@ -8,7 +8,7 @@ import DocumentTitle from 'react-document-title';
 import Question from './question';
 import QuestionCounter from './questionCounter';
 import AnswerOption from './answerOption';
-import quizQuestions from './quizQuestions';
+import quizQuestions from '../../quizQuestions';
 
 const Image = styled.img `
   margin: auto;
