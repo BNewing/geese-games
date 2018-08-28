@@ -5,7 +5,9 @@ import Nav from '../common/nav';
 import IntroText from './intro-text';
 import GooseBox from './goose-box';
 import Footer from '../common/footer';
+
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import quizQuestions from '../../quizQuestions';
 
@@ -14,15 +16,27 @@ const PageWrapper = styled.div `
   margin: auto;
 `
 
+const CallToActionWrapper = styled.div `
+  text-align: center;
+  margin: 3em;
+  padding: 1em;
+`
+
+const Button = styled.button `
+  font-size: 18px;
+  background-color: #FF9A35;
+  margin: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+`
+
+const StyledLink = styled(Link) `
+  text-decoration: none;
+  color: black;
+`
+
 export default class GeeseInfo extends Component {
-  displayGooseBoxes = () => {
-    for (let i = 0; i < quizQuestions.length; i++){
-      console.log(quizQuestions.length)
-      let gooseName = quizQuestions[i].correctAnswer;
-      let image = quizQuestions[i].image;
-      <GooseBox text={gooseName} alt={gooseName} image={image} />
-    }
-  }
   render() {
     return (
       <DocumentTitle title="Geese Info || Geese Games">
@@ -30,10 +44,12 @@ export default class GeeseInfo extends Component {
         	<Nav />	
         	<PageWrapper>
           	<IntroText />
-
-            {quizQuestions.map((item,i) => <GooseBox text={item.correctAnswer} key={i} alt={item.correctAnswer} image={item.image} />)}
-
-        	</PageWrapper>
+              {quizQuestions.map((item,i) => <GooseBox text={item.correctAnswer} key={i} alt={item.correctAnswer} image={item.image} />)}
+        	   <CallToActionWrapper>
+              <p>Ready to test out your geese knowledge?</p>
+              <Button><StyledLink to="/quiz">Take the quiz</StyledLink></Button>
+             </CallToActionWrapper>
+          </PageWrapper>
         <Footer />
         </div>
       </DocumentTitle>
