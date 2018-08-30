@@ -7,6 +7,11 @@ I really love geese, which are totally underrated and underappreciated animals i
 - React
 - Styled-components
 
+## How to work with this project
+- Once you've cloned it down, run `npm install` to get all the appropriate modules
+- Then, run `npm run start` to start the local server and navigate to the port it tells you to go to
+- Once you're ready to deploy, push up GitHub and merge into the master branch if you weren't on master, then run `npm run deploy`
+
 ## Resources
 
 After asking around, I was recommended and then got Wes Bos' [reactforbeginners.com](reactforbeginners.com) course to get me started. Then, when I started up this project, I often referred to the [Facebook documentation](https://facebook.github.io/react/docs/hello-world.html). I used [create-react-app](https://github.com/facebookincubator/create-react-app) to start me off. 
