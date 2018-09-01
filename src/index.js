@@ -6,7 +6,7 @@ import { Route } from 'react-router';
 import './index.css';
 import Home from './components/homepage/home';
 import GeeseInfo from './components/geeseInfo/geese-info';
-import GooseBox from './components/geeseInfo/goose-box';
+import DetailedGooseInfo from './components/geeseInfo/detailed-goose-info';
 import Quiz from './components/quiz/quiz';
 
 import quizQuestions from './quizQuestions';
@@ -21,7 +21,7 @@ export default class Root extends Component {
 					<Route exact path="/" component={ Home } />
 					<Route path="/geese-info" component={ GeeseInfo } />
 					<Route path="/quiz" component={ Quiz } />
-					<Route path="/geese-info/:url" render={(props) => <GooseBox {...props} />} />
+					<Route path="/goose-info/:url" component={DetailedGooseInfo} />} />
 				</div>
 			</HashRouter>
 		)

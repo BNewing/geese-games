@@ -23,15 +23,14 @@ const Text = styled.p `
 	border-radius: 5px;
 `
 
-export default class GooseBox extends Component {
+export default class DetailedGooseInfo extends Component {
   render() {
     return (
-      	<Link to={"/goose-info/" + this.props.url}>
-      		<Wrapper>
-	        	<Image src={this.props.image} alt={this.props.alt}/>
-	        	<Text>{this.props.text}</Text>
-	        </Wrapper>
-     	</Link>
+  		<Wrapper>
+  		<p>Hello!</p>
+        	<Image src={this.props.image} alt={this.props.alt}/>
+        	<Text>{this.props.text}</Text>
+        </Wrapper>
     );
   }
 }
