@@ -20,9 +20,14 @@ const Image = styled.img `
 	display: block;
 `
 
-const Text = styled.h1 `
+const Heading = styled.h1 `
 	text-align: center;
 	padding: 8px;
+`
+
+const Text = styled.p `
+	width: 75%;
+	margin: 2rem auto;
 `
 
 const Button = styled.button `
@@ -49,8 +54,9 @@ export default class DetailedGooseInfo extends Component {
         	<Nav />
         	<Wrapper>
         		<Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
-        		<Text>{quizQuestions[url].correctAnswer}</Text>
+        		<Heading>{quizQuestions[url].correctAnswer}</Heading>
         		<Image src={quizQuestions[url].image} alt={quizQuestions[url].alt}/>
+        		<Text>{quizQuestions[url].description}</Text>
           </Wrapper>
           <Footer />
       </div>
