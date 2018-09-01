@@ -45,7 +45,7 @@ export default class GeeseInfo extends Component {
         	<Nav />	
         	<PageWrapper>
           	<IntroText />
-              {quizQuestions.map((item,i) => <GooseBox text={item.correctAnswer} key={i} alt={item.correctAnswer} image={item.image} />)}
+              {quizQuestions.map((item,i) => <GooseBox url={item.url} text={item.correctAnswer} key={i} alt={item.correctAnswer} image={item.image} />)}
         	   <CallToActionWrapper>
               <p>Ready to test out your geese knowledge?</p>
               <Button><StyledLink to="/quiz">Take the quiz</StyledLink></Button>

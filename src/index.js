@@ -21,7 +21,7 @@ export default class Root extends Component {
 					<Route exact path="/" component={ Home } />
 					<Route path="/geese-info" component={ GeeseInfo } />
 					<Route path="/quiz" component={ Quiz } />
-					<Route path="/goose/:url" component={GooseBox} />
+					<Route path="/geese-info/:url" render={(props) => <GooseBox {...props} />} />
 				</div>
 			</HashRouter>
 		)
