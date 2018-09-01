@@ -53,6 +53,12 @@ export default class GeeseInfo extends Component {
        quizCompleted: false
     };
   };
+  
+  optionSelected = (e) => { 
+    this.setState({
+      selectedAnswer: e
+    })
+  };
 
   checkAnswer = () => {
     this.updateCounter();
@@ -61,8 +67,7 @@ export default class GeeseInfo extends Component {
         numberCorrectAnswers: this.state.numberCorrectAnswers +1
       }))
     }
-    alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
-    
+    this.displayRightAnswer();  
     if (this.state.questionId < quizQuestions.length) {
         this.loadNextQuestion();
     } 
@@ -92,16 +97,15 @@ export default class GeeseInfo extends Component {
     })
   };
   
-  optionSelected = (e) => { 
-    this.setState({
-      selectedAnswer: e
-    })
-  };
+  displayRightAnswer = () => {
+    alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
+  }
+
 
   render() {
     const htmlForCompleted = `<p>You got ${this.state.numberCorrectAnswers} out of ${this.state.questionId} questions right.</p>`
-
     const notCompleted = ``
+
     return (
       <DocumentTitle title="Quiz || Geese Games">
         <PageWrapper>
