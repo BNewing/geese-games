@@ -33,7 +33,7 @@ const CallToActionWrapper = styled.div `
   text-align: center;
   margin: 3em;
   padding: 1em;
-  border-top: 1px solid #C0E6E2;
+  border-top: 1px solid #000000;
 `
 
 
