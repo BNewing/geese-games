@@ -10,18 +10,18 @@ import QuestionCounter from './questionCounter';
 import AnswerOption from './answerOption';
 import quizQuestions from '../../quizQuestions';
 
-const Image = styled.img `
+const Image = styled.img`
   margin: auto;
   display: block;
   height: 15em;
   border-radius: 50%;
 `
 
-const PageWrapper = styled.div `
+const PageWrapper = styled.div`
   text-align: center;
 `
 
-const Button = styled.button `
+const Button = styled.button`
   font-size: 1.125rem;
   background-color: #C0E6E2;
   margin: 0 auto;
@@ -30,14 +30,14 @@ const Button = styled.button `
   text-align: center;
 `
 
-const List = styled.ul `
+const List = styled.ul`
   padding: 0;
   width: 20rem;
   margin: 0 auto;
   text-align: left;
 `
 
-const StyledLink = styled(Link) `
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
 `
@@ -45,20 +45,20 @@ const StyledLink = styled(Link) `
 export default class GeeseInfo extends Component {
   constructor(props) {
     super(props);
-      this.state = {
-       counter: 0,
-       questionId: 1,
-       question: quizQuestions[0]["question"],
-       image: quizQuestions[0].image,
-       answerOptions: quizQuestions[0].answers,
-       correctAnswer: quizQuestions[0].correctAnswer,
-       selectedAnswer: '',
-       numberCorrectAnswers: 0,
-       quizCompleted: false
+    this.state = {
+      counter: 0,
+      questionId: 1,
+      question: quizQuestions[0]["question"],
+      image: quizQuestions[0].image,
+      answerOptions: quizQuestions[0].answers,
+      correctAnswer: quizQuestions[0].correctAnswer,
+      selectedAnswer: '',
+      numberCorrectAnswers: 0,
+      quizCompleted: false
     };
   };
-  
-  optionSelected = (e) => { 
+
+  optionSelected = (e) => {
     this.setState({
       selectedAnswer: e
     })
@@ -68,15 +68,16 @@ export default class GeeseInfo extends Component {
     this.updateCounter();
     if (this.state.selectedAnswer === this.state.correctAnswer) {
       this.setState((state) => ({
-        numberCorrectAnswers: this.state.numberCorrectAnswers +1
+        numberCorrectAnswers: this.state.numberCorrectAnswers + 1
       }))
     }
-    this.displayRightAnswer();  
+    this.displayRightAnswer();
     if (this.state.questionId < quizQuestions.length) {
-        this.loadNextQuestion();
-    } 
+      this.clearSelection();
+      this.loadNextQuestion();
+    }
     else {
-      this.setState ({
+      this.setState({
         image: '',
         question: '',
         answerOptions: [],
@@ -89,10 +90,16 @@ export default class GeeseInfo extends Component {
     this.setState((state) => ({ counter: this.state.counter + 1 }));
   }
 
+  clearSelection = () => {
+    console.log('clearing selection');
+    this.setState({
+      selectedAnswer: '',
+    })
+  }
   loadNextQuestion = () => {
-    this.setState({counter: this.state.counter+1}, () => {
+    this.setState({ counter: this.state.counter + 1 }, () => {
       this.setState({
-        questionId: this.state.questionId +1,
+        questionId: this.state.questionId + 1,
         image: quizQuestions[this.state.counter].image,
         question: quizQuestions[this.state.counter].question,
         correctAnswer: quizQuestions[this.state.counter].correctAnswer,
@@ -100,7 +107,7 @@ export default class GeeseInfo extends Component {
       })
     })
   };
-  
+
   displayRightAnswer = () => {
     alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
   }
@@ -113,10 +120,10 @@ export default class GeeseInfo extends Component {
     return (
       <DocumentTitle title="Quiz || Geese Games">
         <PageWrapper>
-        	<Nav />	
-            {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
-            <QuestionCounter 
-              counter={this.state.questionId} 
+          <Nav />
+          {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
+            <QuestionCounter
+              counter={this.state.questionId}
               total={quizQuestions.length} />
               )}
             {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
@@ -125,6 +132,7 @@ export default class GeeseInfo extends Component {
               {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
             </List>
             {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
+
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
           <Footer />
         </PageWrapper>

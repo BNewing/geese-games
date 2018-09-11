@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-
 import { Radio } from 'govuk-react'
 
 const ListItem = styled.li `
@@ -16,6 +15,7 @@ export default class AnswerOption extends Component {
 	updateSelectedOption(e) {
 		this.props.handleChange(e.target.value);
 	}
+  
     render() {
 	    return (<Radio
 		          key={this.props.answer}
