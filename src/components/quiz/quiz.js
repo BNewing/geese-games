@@ -13,6 +13,7 @@ import quizQuestions from '../../quizQuestions';
 const Image = styled.img`
   margin: auto;
   display: block;
+  height: 15em;
   border-radius: 50%;
 `
 
@@ -31,6 +32,9 @@ const Button = styled.button`
 
 const List = styled.ul`
   padding: 0;
+  width: 20rem;
+  margin: 0 auto;
+  text-align: left;
 `
 
 const StyledLink = styled(Link)`
@@ -121,13 +125,14 @@ export default class GeeseInfo extends Component {
             <QuestionCounter
               counter={this.state.questionId}
               total={quizQuestions.length} />
-          )}
-          {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question} />}
-          {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
-          <List>
-            {this.state.answerOptions.map((item, i) => <AnswerOption key={i} answer={item} isChecked={item === this.state.selectedAnswer} handleChange={e => this.optionSelected(e)} />)}
-          </List>
-          {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button>) : (
+              )}
+            {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
+            {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
+            <List>
+              {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
+            </List>
+            {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
+
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
           <Footer />
         </PageWrapper>
