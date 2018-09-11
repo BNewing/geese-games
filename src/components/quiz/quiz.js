@@ -32,7 +32,7 @@ const Button = styled.button `
 
 const List = styled.ul `
   padding: 0;
-  width: 15rem;
+  width: 20rem;
   margin: 0 auto;
   text-align: left;
 `
@@ -122,7 +122,7 @@ export default class GeeseInfo extends Component {
             {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
             {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
             <List>
-              {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)}/>)}
+              {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
             </List>
             {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
