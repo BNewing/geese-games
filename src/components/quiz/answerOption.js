@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import { Radio } from 'govuk-react'
+
 const ListItem = styled.li `
   list-style: none;
 `
@@ -15,19 +17,14 @@ export default class AnswerOption extends Component {
 		this.props.handleChange(e.target.value);
 	}
     render() {
-	    return (
-		   	<ListItem>
-		        <input
-		          type="radio"
-		          name="radioGroup"
-		          id={this.props.answer}
+	    return (<Radio
+		          key={this.props.answer}
 		          value={this.props.answer}
 		          onChange={this.updateSelectedOption}
-		        />
-		        <label htmlFor={this.props.answer}>
-		          {this.props.answer}
-		        </label>
-		      </ListItem>
+		          checked={this.props.isChecked}
+		        >
+		         {this.props.answer}
+		        </Radio>
 	    );
 	}
 }
