@@ -10,15 +10,16 @@ import QuestionCounter from './questionCounter';
 import AnswerOption from './answerOption';
 import quizQuestions from '../../quizQuestions';
 
+const PageWrapper = styled.div`
+  text-align: center;
+  flex: 1;
+`
+
 const Image = styled.img`
   margin: auto;
   display: block;
   height: 15em;
   border-radius: 50%;
-`
-
-const PageWrapper = styled.div`
-  text-align: center;
 `
 
 const Button = styled.button`

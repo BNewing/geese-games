@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.div `
   margin:  0 auto;
   width: 60%;
+  flex: 1;
 `
 
 const Button = styled.button `

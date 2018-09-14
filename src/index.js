@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import { Route } from 'react-router';
+import styled from 'styled-components';
 
 import './index.css';
 import Home from './components/homepage/home';
@@ -10,8 +11,13 @@ import DetailedGooseInfo from './components/geeseInfo/detailed-goose-info';
 import Quiz from './components/quiz/quiz';
 
 import quizQuestions from './quizQuestions';
-
 import registerServiceWorker from './registerServiceWorker';
+
+const PageWrapper = styled.div `
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+`
 
 export default class Root extends Component {
 	render() {

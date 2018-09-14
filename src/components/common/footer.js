@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 
 import styled from 'styled-components';
 
-const Wrapper = styled.div `
+const Wrapper = styled.footer `
 	background-color: #F8E1A3;
 	height: 100%;
-	padding: 0 20px;
+	padding: 20px;
+	text-align: center;
+	margin-top: 2rem;
 `
 
-const Text = styled.p `
+const Text = styled.small `
 	text-align: center;	
 	padding: 20px;
 `
