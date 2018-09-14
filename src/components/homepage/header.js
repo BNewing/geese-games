@@ -17,7 +17,6 @@ const Image = styled.div `
 const HeaderTextWrapper = styled.div `
   text-align: center;
   padding: 20px;
-  text-transform: uppercase;
 `
 
 export default class Header extends Component {

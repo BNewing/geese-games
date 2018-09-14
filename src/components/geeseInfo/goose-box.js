@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import styled from 'styled-components';
 
@@ -25,10 +26,12 @@ const Text = styled.p `
 export default class GooseBox extends Component {
   render() {
     return (
-      <Wrapper>
-        <Image src={this.props.image} alt={this.props.alt}/>
-        <Text>{this.props.text}</Text>
-      </Wrapper>
+      	<Link to={"/goose-info/" + this.props.url}>
+      		<Wrapper>
+	        	<Image src={this.props.image} alt={this.props.alt}/>
+	        	<Text>{this.props.text}</Text>
+	        </Wrapper>
+     	</Link>
     );
   }
 }
