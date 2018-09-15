@@ -25,9 +25,16 @@ const Heading = styled.h1 `
 	padding: 8px;
 `
 
-const Text = styled.p `
+const DetailedList = styled.dl `
 	width: 75%;
 	margin: 2rem auto;
+`
+
+const DetailedListDt = styled.dt `
+  font-weight: bold;
+  padding: 1em 0 0.5em 0;
+  font-size: 20px;
+  color: #000;
 `
 
 const Button = styled.button `
@@ -56,7 +63,18 @@ export default class DetailedGooseInfo extends Component {
         		<Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
         		<Heading>{quizQuestions[url].correctAnswer}</Heading>
         		<Image src={quizQuestions[url].image} alt={quizQuestions[url].correctAnswer}/>
-        		<Text>{quizQuestions[url].description}</Text>
+
+            <DetailedList>
+              <DetailedListDt>Latin name:</DetailedListDt>
+              <dd>{quizQuestions[url].latinName}</dd>
+              <DetailedListDt>Average weight:</DetailedListDt>
+              <dd>{quizQuestions[url].averageWeight}</dd>
+              <DetailedListDt>UK population:</DetailedListDt>
+              <dd>{quizQuestions[url].ukPopulation}</dd>
+              <DetailedListDt>General description:</DetailedListDt>
+              <dd>{quizQuestions[url].description}</dd>
+            </DetailedList>
+        		
           </Wrapper>
           <Footer />
       </div>
