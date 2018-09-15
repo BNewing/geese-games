@@ -55,7 +55,7 @@ export default class DetailedGooseInfo extends Component {
         	<Wrapper>
         		<Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
         		<Heading>{quizQuestions[url].correctAnswer}</Heading>
-        		<Image src={quizQuestions[url].image} alt={quizQuestions[url].alt}/>
+        		<Image src={quizQuestions[url].image} alt={quizQuestions[url].correctAnswer}/>
         		<Text>{quizQuestions[url].description}</Text>
           </Wrapper>
           <Footer />
