@@ -62,6 +62,7 @@ export default class GeeseInfo extends Component {
       answerOptions: quizQuestions[0].answers,
       correctAnswer: quizQuestions[0].correctAnswer,
       selectedAnswer: '',
+      quizAltText: quizQuestions[0].quizAltText,
       displayAnswer: false,
       numberCorrectAnswers: 0,
       quizCompleted: false
@@ -75,7 +76,6 @@ export default class GeeseInfo extends Component {
   };
 
   checkAnswer = () => {
-    this.updateCounter();
     if (this.state.selectedAnswer === this.state.correctAnswer) {
       this.setState((state) => ({
         numberCorrectAnswers: this.state.numberCorrectAnswers + 1
@@ -98,13 +98,9 @@ export default class GeeseInfo extends Component {
       this.setState({
         displayAnswer: false
       })
-    }, 5000)
+    }, 500)
     
   };
-
-  updateCounter = () => {
-    this.setState((state) => ({ counter: this.state.counter + 1 }));
-  }
 
   clearSelection = () => {
     this.setState({
@@ -118,7 +114,8 @@ export default class GeeseInfo extends Component {
         image: quizQuestions[this.state.counter].image,
         question: quizQuestions[this.state.counter].question,
         correctAnswer: quizQuestions[this.state.counter].correctAnswer,
-        answerOptions: quizQuestions[this.state.counter].answers
+        answerOptions: quizQuestions[this.state.counter].answers,
+        quizAltText: quizQuestions[this.state.counter].quizAltText
       })
     })
   };
@@ -152,7 +149,7 @@ export default class GeeseInfo extends Component {
               total={quizQuestions.length} />
               )}
             {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
-            {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt="goose" />)}
+            {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt={this.state.quizAltText} />)}
             <List>
               {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
             </List>

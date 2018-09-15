@@ -33,7 +33,7 @@ const quizQuestions = [
 		latinName: "Anser serrirostris",
 		averageWeight: "1.9 to 3.3kg",
 		ukPopulation: "UK Wintering: 320",
-		quizAltText: "Latin name is Anser serrirostris, weighs XXXkg on average and it has a UK Wintering population of 320",
+		quizAltText: "Latin name is Anser serrirostris, weighs 1.9 to 3.3kg on average and it has a UK Wintering population of 320",
 		description: "The bean goose is a goose that breeds in northern Europe and Asia. It has two distinct varieties, one inhabiting taiga habitats and one inhabiting tundra. These are recognised as separate species by the American Ornithologists' Union and the IOC (taiga bean goose and tundra bean goose), but are considered a single species by other authorities, such as the British Ornithologists' Union. It is migratory and winters further south in Europe and Asia."
 	},
 	{
