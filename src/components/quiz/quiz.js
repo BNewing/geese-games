@@ -74,18 +74,24 @@ export default class GeeseInfo extends Component {
       }))
     }
     this.displayRightAnswer();
-    if (this.state.questionId < quizQuestions.length) {
-      this.clearSelection();
-      this.loadNextQuestion();
-    }
-    else {
+    setTimeout(() => {
+      if (this.state.questionId < quizQuestions.length) {
+        this.clearSelection();
+        this.loadNextQuestion();
+      }
+      else {
+        this.setState({
+          image: '',
+          question: '',
+          answerOptions: [],
+          quizCompleted: true
+        })
+      }
       this.setState({
-        image: '',
-        question: '',
-        answerOptions: [],
-        quizCompleted: true
+        displayAnswer: false
       })
-    }
+    }, 3000)
+    
   };
 
   updateCounter = () => {
@@ -93,7 +99,6 @@ export default class GeeseInfo extends Component {
   }
 
   clearSelection = () => {
-    console.log('clearing selection');
     this.setState({
       selectedAnswer: '',
     })
@@ -111,12 +116,18 @@ export default class GeeseInfo extends Component {
   };
 
   displayRightAnswer = () => {
-    //set timeout
-      // if this.state.selectedAnswer = this.state.correctAnswer
-      // let questionResult = "Right answer - that is a this.state.selectedAnswer!"
-      // else questionResult = "Wrong - the goose is actually is this.state.correctAnswer";
-    //this.state.selectedAnswer = false
-    alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
+    if (this.state.selectedAnswer === this.state.correctAnswer){
+      let questionResult = "Correct - that is a " + this.state.selectedAnswer +"!";
+      this.setState({
+        displayAnswer: questionResult
+      })
+    }
+    else {
+      let questionResult = "Wrong - the goose is actually a " + this.state.correctAnswer;
+      this.setState({
+        displayAnswer: questionResult
+      })
+    }  
   }
 
 
@@ -140,7 +151,7 @@ export default class GeeseInfo extends Component {
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
 
-            <p>{this.state.selectedAnswer}</p>
+            <p>{this.state.displayAnswer}</p>
          
         </PageWrapper>
          <Footer />
