@@ -151,7 +151,7 @@ export default class GeeseInfo extends Component {
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
 
-            <p>{this.state.displayAnswer}</p>
+            <p aria-live="assertive">{this.state.displayAnswer}</p>
          
         </PageWrapper>
          <Footer />
