@@ -43,6 +43,14 @@ const StyledLink = styled(Link)`
   color: black;
 `
 
+const HiddenHeader = styled.h1 `
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+`
+
 export default class GeeseInfo extends Component {
   constructor(props) {
     super(props);
@@ -90,7 +98,7 @@ export default class GeeseInfo extends Component {
       this.setState({
         displayAnswer: false
       })
-    }, 3000)
+    }, 5000)
     
   };
 
@@ -137,6 +145,7 @@ export default class GeeseInfo extends Component {
       <div>
         <PageWrapper>
           <Nav />
+          <HiddenHeader>Goose Quiz</HiddenHeader>
           {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
             <QuestionCounter
               counter={this.state.questionId}
@@ -151,7 +160,7 @@ export default class GeeseInfo extends Component {
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
 
-            <p aria-live="assertive">{this.state.displayAnswer}</p>
+            <p aria-live="polite">{this.state.displayAnswer}</p>
          
         </PageWrapper>
          <Footer />
