@@ -54,6 +54,7 @@ export default class GeeseInfo extends Component {
       answerOptions: quizQuestions[0].answers,
       correctAnswer: quizQuestions[0].correctAnswer,
       selectedAnswer: '',
+      displayAnswer: false,
       numberCorrectAnswers: 0,
       quizCompleted: false
     };
@@ -110,16 +111,19 @@ export default class GeeseInfo extends Component {
   };
 
   displayRightAnswer = () => {
+    //set timeout
+      // if this.state.selectedAnswer = this.state.correctAnswer
+      // let questionResult = "Right answer - that is a this.state.selectedAnswer!"
+      // else questionResult = "Wrong - the goose is actually is this.state.correctAnswer";
+    //this.state.selectedAnswer = false
     alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
   }
 
 
   render() {
-    const htmlForCompleted = `<p>You got ${this.state.numberCorrectAnswers} out of ${this.state.questionId} questions right.</p>`
-    const notCompleted = ``
-
     return (
       <DocumentTitle title="Quiz || Geese Games">
+      <div>
         <PageWrapper>
           <Nav />
           {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
@@ -135,8 +139,12 @@ export default class GeeseInfo extends Component {
             {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
-          <Footer />
+
+            <p>{this.state.selectedAnswer}</p>
+         
         </PageWrapper>
+         <Footer />
+         </div>
       </DocumentTitle>
     );
   }

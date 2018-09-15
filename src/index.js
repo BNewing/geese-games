@@ -23,12 +23,12 @@ export default class Root extends Component {
 	render() {
 		return (
 			<HashRouter>
-				<div>
+				<PageWrapper>
 					<Route exact path="/" component={ Home } />
 					<Route path="/geese-info" component={ GeeseInfo } />
 					<Route path="/quiz" component={ Quiz } />
 					<Route path="/goose-info/:url" render={(props) => <DetailedGooseInfo {...props}/>} />
-				</div>
+				</PageWrapper>
 			</HashRouter>
 		)
 	}
