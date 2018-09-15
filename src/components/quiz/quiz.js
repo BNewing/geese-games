@@ -54,6 +54,7 @@ export default class GeeseInfo extends Component {
       answerOptions: quizQuestions[0].answers,
       correctAnswer: quizQuestions[0].correctAnswer,
       selectedAnswer: '',
+      displayAnswer: false,
       numberCorrectAnswers: 0,
       quizCompleted: false
     };
@@ -73,18 +74,24 @@ export default class GeeseInfo extends Component {
       }))
     }
     this.displayRightAnswer();
-    if (this.state.questionId < quizQuestions.length) {
-      this.clearSelection();
-      this.loadNextQuestion();
-    }
-    else {
+    setTimeout(() => {
+      if (this.state.questionId < quizQuestions.length) {
+        this.clearSelection();
+        this.loadNextQuestion();
+      }
+      else {
+        this.setState({
+          image: '',
+          question: '',
+          answerOptions: [],
+          quizCompleted: true
+        })
+      }
       this.setState({
-        image: '',
-        question: '',
-        answerOptions: [],
-        quizCompleted: true
+        displayAnswer: false
       })
-    }
+    }, 3000)
+    
   };
 
   updateCounter = () => {
@@ -92,7 +99,6 @@ export default class GeeseInfo extends Component {
   }
 
   clearSelection = () => {
-    console.log('clearing selection');
     this.setState({
       selectedAnswer: '',
     })
@@ -110,16 +116,25 @@ export default class GeeseInfo extends Component {
   };
 
   displayRightAnswer = () => {
-    alert("You chose " + this.state.selectedAnswer + ", and the correct answer is: " + this.state.correctAnswer);
+    if (this.state.selectedAnswer === this.state.correctAnswer){
+      let questionResult = "Correct - that is a " + this.state.selectedAnswer +"!";
+      this.setState({
+        displayAnswer: questionResult
+      })
+    }
+    else {
+      let questionResult = "Wrong - the goose is actually a " + this.state.correctAnswer;
+      this.setState({
+        displayAnswer: questionResult
+      })
+    }  
   }
 
 
   render() {
-    const htmlForCompleted = `<p>You got ${this.state.numberCorrectAnswers} out of ${this.state.questionId} questions right.</p>`
-    const notCompleted = ``
-
     return (
       <DocumentTitle title="Quiz || Geese Games">
+      <div>
         <PageWrapper>
           <Nav />
           {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
@@ -135,8 +150,12 @@ export default class GeeseInfo extends Component {
             {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
-          <Footer />
+
+            <p>{this.state.displayAnswer}</p>
+         
         </PageWrapper>
+         <Footer />
+         </div>
       </DocumentTitle>
     );
   }
