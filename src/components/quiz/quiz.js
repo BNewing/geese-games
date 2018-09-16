@@ -135,7 +135,6 @@ export default class GeeseInfo extends Component {
     }  
   }
 
-
   render() {
     return (
       <DocumentTitle title="Quiz || Geese Games">
@@ -157,7 +156,7 @@ export default class GeeseInfo extends Component {
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
 
-            <p aria-live="polite">{this.state.displayAnswer}</p>
+            <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: 'green'} : {color: 'red'}} aria-live="polite">{this.state.displayAnswer}</p>
          
         </PageWrapper>
          <Footer />
