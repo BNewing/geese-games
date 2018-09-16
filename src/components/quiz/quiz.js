@@ -98,7 +98,7 @@ export default class GeeseInfo extends Component {
       this.setState({
         displayAnswer: false
       })
-    }, 500)
+    }, 5000)
     
   };
 
@@ -156,7 +156,7 @@ export default class GeeseInfo extends Component {
 
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
 
-            <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: 'green'} : {color: 'red'}} aria-live="polite">{this.state.displayAnswer}</p>
+            <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: '#3CB371'} : {color: '#FF0000'}} aria-live="polite">{this.state.displayAnswer}</p>
          
         </PageWrapper>
          <Footer />
