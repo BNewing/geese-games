@@ -53,6 +53,7 @@ export default class Home extends Component {
               <p>Go learn about geese and when you're ready, check out the quiz page!</p>
               <Button><StyledLink to="geese-info">Learn About geese</StyledLink></Button>
               <Button><StyledLink to="/quiz">Take the quiz</StyledLink></Button>
+              <Button><StyledLink to="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink></Button>
             </CallToActionWrapper>
           </Wrapper>
           <Footer />
