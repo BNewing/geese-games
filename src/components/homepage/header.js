@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import styled from 'styled-components';
+import GeeseFamily from '../../images/geese-family-2.jpg';
 
 const Wrapper = styled.div `
   background-color: #FF9A35;
@@ -8,9 +9,11 @@ const Wrapper = styled.div `
 
 const Image = styled.div `
   text-transform: uppercase;
-  background: url('https://thumb7.shutterstock.com/display_pic_with_logo/4028569/633482957/stock-photo-a-feral-goose-at-a-park-in-redding-california-he-and-his-mate-try-to-intimidate-humans-into-633482957.jpg');
-  background-position: center bottom;
-  height: 300px;
+  background: url(${GeeseFamily});
+  background-position: center;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
 `
 

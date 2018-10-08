@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import HandFeeding from '../../images/handfeeding.JPG';
 
 const ComponentWrapper = styled.div `
 :before,
@@ -38,7 +39,7 @@ export default class InfoImageLeft extends Component {
     return (
       <ComponentWrapper>
       	<ImageWrapper>
-          <Image src="https://thumb1.shutterstock.com/display_pic_with_logo/488002/524660629/stock-photo-geese-on-green-meadow-geese-and-goose-group-of-gray-geese-524660629.jpg" alt="Cute goose" />
+          <Image src={HandFeeding} alt="Cute goose" />
         </ImageWrapper>
         <TextWrapper>
           <h2>What is this website?</h2>
