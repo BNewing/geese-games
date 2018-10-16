@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrapper = styled.div `
 	width: 60%;
 	margin: auto;
-	padding-bottom: 50px;
+	padding-bottom: 3.125rem;
 `
 
 const Header = styled.h1 `

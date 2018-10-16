@@ -8,17 +8,15 @@ const Wrapper = styled.div `
 
 const Image = styled.div `
   text-transform: uppercase;
-  background: url(${GeeseFamily});
-  background-position: center;
+  background: url(${GeeseFamily}) no-repeat center;
   height: 15rem;
-  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
 `
 
 const HeaderTextWrapper = styled.div `
   text-align: center;
-  padding: 20px;
+  padding: 1.25rem;
 `
 
 export default class Header extends Component {

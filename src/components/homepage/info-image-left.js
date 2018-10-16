@@ -10,7 +10,7 @@ const ComponentWrapper = styled.div `
       clear: both;
   }
   display: block;
-  margin: 40px 0;
+  margin: 2.5rem 0;
   height: auto;
   *zoom: 1;
 `

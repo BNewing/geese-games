@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import FeedingGeese from '../../images/feeding-geese.jpg';
 
 const ComponentWrapper = styled.div `
-:before,
-:after {
-    content: " "; 
-    display: table; 
-    clear: both;
-}
+  :before,
+  :after {
+      content: " "; 
+      display: table; 
+      clear: both;
+  }
   display: block;
-  margin: 40px 0;
+  margin: 2.5rem 0;
   height: auto;
   *zoom: 1;
 `

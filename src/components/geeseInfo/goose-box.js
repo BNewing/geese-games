@@ -17,9 +17,9 @@ const Text = styled.p `
 	text-align: center;
 	font-size: 18px;
 	background-color: #C0E6E2;
-	padding: 8px;
+	padding: 0.5rem;
 	border: 1px solid black;
-	border-radius: 5px;
+	border-radius: 0.25rem;
 `
 
 export default class GooseBox extends Component {

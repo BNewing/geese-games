@@ -19,7 +19,7 @@ const Image = styled.img `
 
 const Heading = styled.h1 `
 	text-align: center;
-	padding: 8px;
+	padding: 0.5rem;
 `
 
 const DetailedList = styled.dl `
@@ -30,7 +30,7 @@ const DetailedList = styled.dl `
 const DetailedListDt = styled.dt `
   font-weight: bold;
   padding: 1em 0 0.5em 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #000;
 `
 
@@ -38,8 +38,8 @@ const Button = styled.button `
   font-size: 18px;
   background-color: #C0E6E2;
   margin-top: 2em;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   text-align: center;
 `
 
