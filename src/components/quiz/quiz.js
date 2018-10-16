@@ -4,7 +4,6 @@ import Footer from '../common/footer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
-
 import Question from './question';
 import QuestionCounter from './questionCounter';
 import AnswerOption from './answerOption';
@@ -153,11 +152,8 @@ export default class GeeseInfo extends Component {
               {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
             </List>
             {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
-
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
-
             <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: '#3CB371'} : {color: '#FF0000'}} aria-live="polite">{this.state.displayAnswer}</p>
-         
         </PageWrapper>
          <Footer />
          </div>

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import FeedingGeese from '../../images/feeding-geese.jpg';
 
-console.log(FeedingGeese);
-
 const ComponentWrapper = styled.div `
 :before,
 :after {
@@ -35,7 +33,6 @@ const TextWrapper = styled.div `
   width: 60%;
   float: left;
 `
-
 
 export default class InfoImageRight extends Component {
   render() {

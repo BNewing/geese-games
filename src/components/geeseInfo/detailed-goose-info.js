@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import styled from 'styled-components';
-
 import Nav from '../common/nav';
 import Footer from '../common/footer';
-
 import quizQuestions from '../../quizQuestions';
 
 const Wrapper = styled.div `
@@ -55,7 +53,6 @@ export default class DetailedGooseInfo extends Component {
 
   render() {
   	const {url} = this.props.match.params
-	console.log();
     return (
     	<div>
         	<Nav />
@@ -63,7 +60,6 @@ export default class DetailedGooseInfo extends Component {
         		<Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
         		<Heading>{quizQuestions[url].correctAnswer}</Heading>
         		<Image src={quizQuestions[url].image} alt={quizQuestions[url].correctAnswer}/>
-
             <DetailedList>
               <DetailedListDt>Latin name:</DetailedListDt>
               <dd>{quizQuestions[url].latinName}</dd>
@@ -74,7 +70,6 @@ export default class DetailedGooseInfo extends Component {
               <DetailedListDt>General description:</DetailedListDt>
               <dd>{quizQuestions[url].description}</dd>
             </DetailedList>
-        		
           </Wrapper>
           <Footer />
       </div>

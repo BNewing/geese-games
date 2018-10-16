@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
-
 import Nav from '../common/nav';
 import IntroText from './intro-text';
 import GooseBox from './goose-box';
 import Footer from '../common/footer';
-
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-
 import quizQuestions from '../../quizQuestions';
 
 const PageWrapper = styled.div `

@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
-
 import Nav from '../common/nav';
 import Header from './header';
 import InfoImageLeft from './info-image-left';
 import InfoImageRight from './info-image-right';
 import Footer from '../common/footer';
-
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -37,7 +35,6 @@ const CallToActionWrapper = styled.div `
   border-top: 1px solid #C0E6E2;
 `
 
-
 export default class Home extends Component {
   render() {
     return (
@@ -57,7 +54,6 @@ export default class Home extends Component {
             </CallToActionWrapper>
           </Wrapper>
           <Footer />
-
         </div>
       </DocumentTitle>
     );

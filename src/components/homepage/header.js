@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import styled from 'styled-components';
 import GeeseFamily from '../../images/geese-family-2.jpg';
 
