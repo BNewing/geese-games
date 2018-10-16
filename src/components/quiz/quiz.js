@@ -9,6 +9,8 @@ import QuestionCounter from './questionCounter';
 import AnswerOption from './answerOption';
 import quizQuestions from '../../quizQuestions';
 
+quizQuestions.sort( () => Math.random() - 0.5);
+
 const PageWrapper = styled.div`
   text-align: center;
   flex: 1;
@@ -58,7 +60,7 @@ export default class GeeseInfo extends Component {
       questionId: 1,
       question: quizQuestions[0]["question"],
       image: quizQuestions[0].image,
-      answerOptions: quizQuestions[0].answers,
+      answerOptions: quizQuestions[0].answers.sort( () => Math.random() - 0.5),
       correctAnswer: quizQuestions[0].correctAnswer,
       selectedAnswer: '',
       quizAltText: quizQuestions[0].quizAltText,
@@ -106,6 +108,7 @@ export default class GeeseInfo extends Component {
       selectedAnswer: '',
     })
   }
+
   loadNextQuestion = () => {
     this.setState({ counter: this.state.counter + 1 }, () => {
       this.setState({
@@ -113,7 +116,7 @@ export default class GeeseInfo extends Component {
         image: quizQuestions[this.state.counter].image,
         question: quizQuestions[this.state.counter].question,
         correctAnswer: quizQuestions[this.state.counter].correctAnswer,
-        answerOptions: quizQuestions[this.state.counter].answers,
+        answerOptions: quizQuestions[this.state.counter].answers.sort( () => Math.random() - 0.5),
         quizAltText: quizQuestions[this.state.counter].quizAltText
       })
     })
@@ -148,12 +151,12 @@ export default class GeeseInfo extends Component {
               )}
             {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
             {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt={this.state.quizAltText} />)}
+            <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: '#3CB371'} : {color: '#FF0000'}} aria-live="polite">{this.state.displayAnswer}</p>
             <List>
               {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
             </List>
             {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
             <Button onClick={this.checkAnswer}>Submit answer</Button>)}
-            <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: '#3CB371'} : {color: '#FF0000'}} aria-live="polite">{this.state.displayAnswer}</p>
         </PageWrapper>
          <Footer />
          </div>

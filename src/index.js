@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
 import { Route } from 'react-router';
 import styled from 'styled-components';
-
 import './index.css';
 import Home from './components/homepage/home';
 import GeeseInfo from './components/geeseInfo/geese-info';

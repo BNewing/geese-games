@@ -1,8 +1,10 @@
-const quizQuestions = [
+import CandaGoose from './images/canada.JPG';
+import GreylagGoose from './images/greylag.JPG';
 
+const quizQuestions = [
 	{
 		question: "What type of goose is this?",
-		image: "https://thumb9.shutterstock.com/display_pic_with_logo/873577/555906772/stock-photo-greylag-goose-open-the-wings-on-the-water-surface-555906772.jpg",
+		image: `${GreylagGoose}`,
 		correctAnswer: "Greylag goose",
 		answers: ["Brent goose", "Canada goose", "Greylag goose", "Bean goose"],
 		url: "greylag-goose",
@@ -74,7 +76,7 @@ const quizQuestions = [
 	},
 	{
 		question: "What type of goose is this?",
-		image: "https://thumb1.shutterstock.com/display_pic_with_logo/11724/634786370/stock-photo-canada-goose-family-at-richmond-bc-canada-634786370.jpg",
+		image: `${CandaGoose}`,
 		correctAnswer: "Canada goose",
 		answers: ["Canada goose", "Greylag goose", "Barnacle goose", "Chinese goose"],
 		url: "canada-goose",
@@ -108,6 +110,6 @@ const quizQuestions = [
 		quizAltText: "Latin name is Anser brachyrhynchus, weighs 2.2 to 2.7kg on average and has a UK Wintering population of 360,000",
 		description: "The pink-footed goose (Anser brachyrhynchus) is a goose which breeds in eastern Greenland, Iceland and Svalbard. It is migratory, wintering in northwest Europe, especially Ireland, Great Britain, the Netherlands, and western Denmark. The name is often abbreviated in colloquial usage to 'pinkfoot' (plural 'pinkfeet'). Anser is the Latin for 'goose', and brachyrhynchus comes from the Greek brakhus 'short' and rhunkhos 'bill'. It is a medium-sized goose, 60–75 cm (24–30 in) long, the wingspan 135–170 cm (53–67 in), and weighing 1.8–3.4 kg (4.0–7.5 lb). It has a short bill, bright pink in the middle with a black base and tip, and pink feet. The body is mid-grey-brown, the head and neck a richer, darker brown, the rump and vent white, and the tail grey with a broad white tip. The upper wing-coverts are of a somewhat similar pale bluish-grey as in the greylag goose, and the flight feathers blackish-grey. The species is most closely related to the bean goose Anser fabalis (having even been treated as a subspecies of it at times in the past). It produces a medley of high-pitched honking calls, being particularly vocal in flight, with large skeins being almost deafening."
 	}
-]
+];
 
 export default quizQuestions;
