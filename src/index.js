@@ -9,8 +9,6 @@ import Home from './components/homepage/home';
 import GeeseInfo from './components/geeseInfo/geese-info';
 import DetailedGooseInfo from './components/geeseInfo/detailed-goose-info';
 import Quiz from './components/quiz/quiz';
-
-import quizQuestions from './quizQuestions';
 import registerServiceWorker from './registerServiceWorker';
 
 const PageWrapper = styled.div `

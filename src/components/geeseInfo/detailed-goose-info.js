@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import DocumentTitle from 'react-document-title';
 import styled from 'styled-components';
 import Nav from '../common/nav';
 import Footer from '../common/footer';

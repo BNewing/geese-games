@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import { Radio } from 'govuk-react'
-
-const ListItem = styled.li `
-  list-style: none;
-`
 
 export default class AnswerOption extends Component {
 	constructor(props) {
