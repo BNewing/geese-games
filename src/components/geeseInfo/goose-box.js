@@ -22,15 +22,20 @@ const Text = styled.p `
 	border-radius: 0.25rem;
 `
 
+const StyledLink = styled(Link) `
+  text-decoration: none;
+  color: black;
+`
+
 export default class GooseBox extends Component {
   render() {
     return (
-      	<Link to={"/goose-info/" + this.props.url}>
+      	<StyledLink to={"/goose-info/" + this.props.url}>
       		<Wrapper>
 	        	<Image src={this.props.image} alt={this.props.alt}/>
 	        	<Text>{this.props.text}</Text>
 	        </Wrapper>
-     	</Link>
+     	</StyledLink>
     );
   }
 }
