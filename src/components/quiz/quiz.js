@@ -7,7 +7,7 @@ import DocumentTitle from 'react-document-title';
 import Question from './question';
 import quizQuestions from '../../quizQuestions';
 
-//quizQuestions.sort( () => Math.random() - 0.5);
+quizQuestions.sort( () => Math.random() - 0.5);
 
 const PageWrapper = styled.div`
     text-align: center;
