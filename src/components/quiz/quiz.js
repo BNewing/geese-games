@@ -5,43 +5,27 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import DocumentTitle from 'react-document-title';
 import Question from './question';
-import QuestionCounter from './questionCounter';
-import AnswerOption from './answerOption';
 import quizQuestions from '../../quizQuestions';
 
-quizQuestions.sort( () => Math.random() - 0.5);
+//quizQuestions.sort( () => Math.random() - 0.5);
 
 const PageWrapper = styled.div`
-  text-align: center;
-  flex: 1;
-`
-
-const Image = styled.img`
-  margin: auto;
-  display: block;
-  height: 15em;
-  border-radius: 50%;
+    text-align: center;
+    flex: 1;
 `
 
 const Button = styled.button`
-  font-size: 1.125rem;
-  background-color: #C0E6E2;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-align: center;
-`
-
-const List = styled.ul`
-  padding: 0;
-  width: 20rem;
-  margin: 0 auto;
-  text-align: left;
+    font-size: 1.125rem;
+    background-color: #C0E6E2;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
 `
 
 const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 `
 
 const HiddenHeader = styled.h1 `
@@ -53,114 +37,65 @@ const HiddenHeader = styled.h1 `
 `
 
 export default class GeeseInfo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      counter: 0,
-      questionId: 1,
-      question: quizQuestions[0]["question"],
-      image: quizQuestions[0].image,
-      answerOptions: quizQuestions[0].answers.sort( () => Math.random() - 0.5),
-      correctAnswer: quizQuestions[0].correctAnswer,
-      selectedAnswer: '',
-      quizAltText: quizQuestions[0].quizAltText,
-      displayAnswer: false,
-      numberCorrectAnswers: 0,
-      quizCompleted: false
+    constructor(props) {
+        super(props);
+        this.state = {
+            questionIndex: 0,
+            quiz: quizQuestions,
+            numberCorrectAnswers: 0,
+            quizCompleted: false
+        };
     };
-  };
 
-  optionSelected = (e) => {
-    this.setState({
-      selectedAnswer: e
-    })
-  };
+    onAnswer = (isCorrect) => {
+        this.setState({ numberCorrectAnswers: this.state.numberCorrectAnswers + (isCorrect ? 1 : 0)})
+        setTimeout(() => {
+            if (this.state.questionIndex === this.state.quiz.length - 1) {
+                this.setState({
+                    quizCompleted: true
+                });
+            }
+            else {
+                this.setState({
+                    questionIndex: this.state.questionIndex + 1
+                })
+            }
+        }, 5000)
+    };
 
-  checkAnswer = () => {
-    if (this.state.selectedAnswer === this.state.correctAnswer) {
-      this.setState((state) => ({
-        numberCorrectAnswers: this.state.numberCorrectAnswers + 1
-      }))
+    renderQuiz() {
+        const question = this.state.quiz[this.state.questionIndex];
+        return (
+            <React.Fragment>
+                <p>Question {this.state.questionIndex + 1} of {this.state.quiz.length}</p>
+                <Question key={this.state.questionIndex} question={question} onAnswer={this.onAnswer}/>
+            </React.Fragment>
+        );
     }
-    this.displayRightAnswer();
-    setTimeout(() => {
-      if (this.state.questionId < quizQuestions.length) {
-        this.clearSelection();
-        this.loadNextQuestion();
-      }
-      else {
-        this.setState({
-          image: '',
-          question: '',
-          answerOptions: [],
-          quizCompleted: true
-        })
-      }
-      this.setState({
-        displayAnswer: false
-      })
-    }, 5000)
-    
-  };
 
-  clearSelection = () => {
-    this.setState({
-      selectedAnswer: '',
-    })
-  }
-
-  loadNextQuestion = () => {
-    this.setState({ counter: this.state.counter + 1 }, () => {
-      this.setState({
-        questionId: this.state.questionId + 1,
-        image: quizQuestions[this.state.counter].image,
-        question: quizQuestions[this.state.counter].question,
-        correctAnswer: quizQuestions[this.state.counter].correctAnswer,
-        answerOptions: quizQuestions[this.state.counter].answers.sort( () => Math.random() - 0.5),
-        quizAltText: quizQuestions[this.state.counter].quizAltText
-      })
-    })
-  };
-
-  displayRightAnswer = () => {
-    if (this.state.selectedAnswer === this.state.correctAnswer){
-      let questionResult = "Correct - that is a " + this.state.selectedAnswer +"!";
-      this.setState({
-        displayAnswer: questionResult
-      })
+    renderCompleted() {
+        return (
+            <React.Fragment>
+                <p>You got {this.state.numberCorrectAnswers} out of {this.state.quiz.length} questions right.</p>
+                <img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />
+                <p>Go forth and spread alllll the learning about geese</p>          
+                <Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button>
+            </React.Fragment>
+        );
     }
-    else {
-      let questionResult = "Wrong - the goose is actually a " + this.state.correctAnswer;
-      this.setState({
-        displayAnswer: questionResult
-      })
-    }  
-  }
 
-  render() {
-    return (
-      <DocumentTitle title="Quiz || Geese Games">
-      <div>
-        <PageWrapper>
-          <Nav />
-          <HiddenHeader>Goose Quiz</HiddenHeader>
-          {this.state.quizCompleted ? <p>You got {this.state.numberCorrectAnswers} out of {this.state.questionId} questions right.</p> : (
-            <QuestionCounter
-              counter={this.state.questionId}
-              total={quizQuestions.length} />
-              )}
-            {this.state.quizCompleted ? (<img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />) : <Question question={this.state.question}/>}
-            {this.state.quizCompleted ? (<p>Go forth and spread alllll the learning about geese</p>) : (<Image src={this.state.image} alt={this.state.quizAltText} />)}
-            <p style={this.state.selectedAnswer === this.state.correctAnswer ? {color: '#3CB371'} : {color: '#FF0000'}} aria-live="polite">{this.state.displayAnswer}</p>
-            <List>
-              {this.state.answerOptions.map((item,i) => <AnswerOption key={`${this.state.counter}/${i}`} answer={item} handleChange={e=>this.optionSelected(e)} isChecked={item === this.state.selectedAnswer}/>)}
-            </List>
-            {this.state.quizCompleted ? (<Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button> ): (
-            <Button onClick={this.checkAnswer}>Submit answer</Button>)}
-        </PageWrapper>
-         <Footer />
-         </div>
-      </DocumentTitle>
-    );
-  }
+    render() {
+        return (
+            <DocumentTitle title="Quiz || Geese Games">
+                <div>
+                    <PageWrapper>
+                        <Nav />
+                        <HiddenHeader>Goose Quiz</HiddenHeader>
+                        {this.state.quizCompleted ? this.renderCompleted() : this.renderQuiz()}  
+                    </PageWrapper>
+                    <Footer />
+                </div>
+            </DocumentTitle>
+        );
+    }
 }

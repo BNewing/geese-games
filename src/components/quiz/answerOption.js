@@ -4,10 +4,9 @@ import { Radio } from 'govuk-react'
 export default class AnswerOption extends Component {
 	constructor(props) {
 		super(props);
-		this.updateSelectedOption = this.updateSelectedOption.bind(this);
 	}
 
-	updateSelectedOption(e) {
+	updateSelectedOption = (e) => {
 		this.props.handleChange(e.target.value);
 	}
   
@@ -17,6 +16,7 @@ export default class AnswerOption extends Component {
 		          value={this.props.answer}
 		          onChange={this.updateSelectedOption}
 		          checked={this.props.isChecked}
+		          disabled={this.props.disabled}
 		        >
 		         {this.props.answer}
 		        </Radio>

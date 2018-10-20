@@ -12,7 +12,7 @@ const quizQuestions = [
 		averageWeight: "2.9 to 3.7kg",
 		ukPopulation: "46,000 pairs",
 		quizAltText: "Latin name is anser anser, weighs 3.3kg on average and there are 46,000 pairs in the UK",
-		description: " The greylag goose (Anser anser) is a species of large goose in the waterfowl family Anatidae and the type species of the genus Anser. It has mottled and barred grey and white plumage and an orange beak and pink legs. It is the type species of the genus Anser and is the ancestor of the domestic goose, having been domesticated at least as early as 1360 BC. The genus name is from anser, the Latin for 'goose'."
+		description: "The greylag goose (Anser anser) is a species of large goose in the waterfowl family Anatidae and the type species of the genus Anser. It has mottled and barred grey and white plumage and an orange beak and pink legs. It is the type species of the genus Anser and is the ancestor of the domestic goose, having been domesticated at least as early as 1360 BC. The genus name is from anser, the Latin for 'goose'."
 	},
 	{
 		question: "What type of goose is this?",
