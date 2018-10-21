@@ -30,10 +30,10 @@ const StyledLink = styled(Link)`
 
 const HiddenHeader = styled.h1 `
     position: absolute !important;
-    height: 1px; width: 1px;
+    height: 0.0625rem; width: 1px;
     overflow: hidden;
-    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
+    clip: rect(0.0625rem 0.0625rem 0.0625rem 0.0625rem); /* IE6, IE7 */
+    clip: rect(0.0625rem, 0.0625rem, 0.0625rem, 0.0625rem);
 `
 
 export default class GeeseInfo extends Component {

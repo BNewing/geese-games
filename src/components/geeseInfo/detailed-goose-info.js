@@ -35,7 +35,7 @@ const DetailedListDt = styled.dt `
 `
 
 const Button = styled.button `
-  font-size: 18px;
+  font-size: 1.125rem;
   background-color: #C0E6E2;
   margin-top: 2em;
   padding: 0.75rem 1.5rem;

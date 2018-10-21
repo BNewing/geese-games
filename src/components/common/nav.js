@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Wrapper = styled.nav `
 	background-color: #F8E1A3;
 	margin: 0;
-	padding: 16px;
+	padding: 1rem;
 `
 
 const LinkWrapper = styled.li `

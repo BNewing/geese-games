@@ -9,7 +9,7 @@ const Image = styled.img `
 
 const Text = styled.p `
 	text-align: center;
-	font-size: 18px;
+	font-size: 1.125rem;
 	background-color: #C0E6E2;
 	padding: 0.5rem;
 	border: 1px solid black;

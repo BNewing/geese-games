@@ -22,11 +22,11 @@ const CallToActionWrapper = styled.div `
 `
 
 const Button = styled.button `
-  font-size: 18px;
+  font-size: 1.125rem;
   background-color: #C0E6E2;
   margin: 5px;
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   text-align: center;
 `
 
