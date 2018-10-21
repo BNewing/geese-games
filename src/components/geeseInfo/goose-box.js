@@ -27,15 +27,22 @@ const StyledLink = styled(Link) `
   color: black;
 `
 
+const ListItem = styled.li `
+	text-decoration: none;
+	width: 25%;
+	padding: 2% 4%;
+	display:inline-block;
+`
+
 export default class GooseBox extends Component {
   render() {
     return (
-      	<StyledLink to={"/goose-info/" + this.props.url}>
-      		<Wrapper>
-	        	<Image src={this.props.image} alt={this.props.alt}/>
-	        	<Text>{this.props.text}</Text>
-	        </Wrapper>
-     	</StyledLink>
+    	<ListItem>
+	      	<StyledLink to={"/goose-info/" + this.props.url}>
+		        <Image src={this.props.image} alt={this.props.alt}/>
+		        <Text>{this.props.text}</Text>
+	     	</StyledLink>
+     	</ListItem>
     );
   }
 }
