@@ -10,28 +10,20 @@ import DetailedGooseInfo from './components/geeseInfo/detailed-goose-info';
 import Quiz from './components/quiz/quiz';
 import registerServiceWorker from './registerServiceWorker';
 
-const PageWrapper = styled.div `
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
-`
-
 export default class Root extends Component {
 	render() {
 		return (
 			<HashRouter>
-				<PageWrapper>
+				<React.Fragment>
 					<Route exact path="/" component={ Home } />
 					<Route path="/geese-info" component={ GeeseInfo } />
 					<Route path="/quiz" component={ Quiz } />
 					<Route path="/goose-info/:url" render={(props) => <DetailedGooseInfo {...props}/>} />
-				</PageWrapper>
+				</React.Fragment>
 			</HashRouter>
 		)
 	}
-
 }
-
 
 ReactDOM.render(<Root />, document.getElementById('root'));
 registerServiceWorker();
