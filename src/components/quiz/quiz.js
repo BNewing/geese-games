@@ -9,9 +9,9 @@ import quizQuestions from '../../quizQuestions';
 
 quizQuestions.sort( () => Math.random() - 0.5);
 
-const PageWrapper = styled.div`
+const PageWrapper = styled.main`
     text-align: center;
-    flex: 1;
+    flex-grow: 1;
 `
 
 const Button = styled.button`
@@ -87,14 +87,12 @@ export default class GeeseInfo extends Component {
     render() {
         return (
             <DocumentTitle title="Quiz || Geese Games">
-                <div>
-                    <PageWrapper>
-                        <Nav />
-                        <HiddenHeader>Goose Quiz</HiddenHeader>
-                        {this.state.quizCompleted ? this.renderCompleted() : this.renderQuiz()}  
-                    </PageWrapper>
+                <PageWrapper>
+                    <Nav />
+                    <HiddenHeader>Goose Quiz</HiddenHeader>
+                    {this.state.quizCompleted ? this.renderCompleted() : this.renderQuiz()}  
                     <Footer />
-                </div>
+                </PageWrapper>
             </DocumentTitle>
         );
     }

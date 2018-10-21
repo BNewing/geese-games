@@ -53,25 +53,25 @@ export default class DetailedGooseInfo extends Component {
   render() {
   	const {url} = this.props.match.params
     return (
-    	<div>
-        	<Nav />
-        	<Wrapper>
-        		<Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
-        		<Heading>{quizQuestions[url].correctAnswer}</Heading>
-        		<Image src={quizQuestions[url].image} alt={quizQuestions[url].correctAnswer}/>
-            <DetailedList>
-              <DetailedListDt>Latin name:</DetailedListDt>
-              <dd>{quizQuestions[url].latinName}</dd>
-              <DetailedListDt>Average weight:</DetailedListDt>
-              <dd>{quizQuestions[url].averageWeight}</dd>
-              <DetailedListDt>UK population:</DetailedListDt>
-              <dd>{quizQuestions[url].ukPopulation}</dd>
-              <DetailedListDt>General description:</DetailedListDt>
-              <dd>{quizQuestions[url].description}</dd>
-            </DetailedList>
-          </Wrapper>
-          <Footer />
-      </div>
+    	<React.Fragment>
+            <Nav />
+            <Wrapper>
+                <Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
+                <Heading>{quizQuestions[url].correctAnswer}</Heading>
+                <Image src={quizQuestions[url].image} alt={quizQuestions[url].correctAnswer}/>
+                <DetailedList>
+                    <DetailedListDt>Latin name:</DetailedListDt>
+                    <dd>{quizQuestions[url].latinName}</dd>
+                    <DetailedListDt>Average weight:</DetailedListDt>
+                    <dd>{quizQuestions[url].averageWeight}</dd>
+                    <DetailedListDt>UK population:</DetailedListDt>
+                    <dd>{quizQuestions[url].ukPopulation}</dd>
+                    <DetailedListDt>General description:</DetailedListDt>
+                    <dd>{quizQuestions[url].description}</dd>
+                </DetailedList>
+            </Wrapper>
+            <Footer />
+        </React.Fragment>
     );
   }
 }

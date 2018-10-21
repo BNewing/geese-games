@@ -8,10 +8,10 @@ import Footer from '../common/footer';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const Wrapper = styled.div `
+const Wrapper = styled.main `
   margin:  0 auto;
   width: 60%;
-  flex: 1;
+  flex-grow: 1;
 `
 
 const Button = styled.button `
@@ -33,28 +33,29 @@ const CallToActionWrapper = styled.div `
   margin: 3em;
   padding: 1em;
   border-top: 1px solid #C0E6E2;
+  flex-grow: 1;
 `
 
 export default class Home extends Component {
   render() {
     return (
       <DocumentTitle title="Home || Geese Games">
-        <div>
-        	<Nav />
-        	<Header />
-        	<Wrapper>
-          	<InfoImageLeft />
-          	<InfoImageRight />
-            <CallToActionWrapper>
-              <h2>What next?</h2>
-              <p>Go learn about geese and when you're ready, check out the quiz page!</p>
-              <Button><StyledLink to="geese-info">Learn About geese</StyledLink></Button>
-              <Button><StyledLink to="/quiz">Take the quiz</StyledLink></Button>
-              <Button><StyledLink to="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink></Button>
-            </CallToActionWrapper>
-          </Wrapper>
-          <Footer />
-        </div>
+      <React.Fragment>
+      	<Nav />
+      	<Header />
+      	<Wrapper>
+        	<InfoImageLeft />
+        	<InfoImageRight />
+          <CallToActionWrapper>
+            <h2>What next?</h2>
+            <p>Go learn about geese and when you're ready, check out the quiz page!</p>
+            <Button><StyledLink to="geese-info">Learn About geese</StyledLink></Button>
+            <Button><StyledLink to="/quiz">Take the quiz</StyledLink></Button>
+            <Button><StyledLink to="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink></Button>
+          </CallToActionWrapper>
+        </Wrapper>
+        <Footer />
+        </React.Fragment>
       </DocumentTitle>
     );
   }

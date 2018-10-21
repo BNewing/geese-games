@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import GeeseFamily from '../../images/geese-family-2.jpg';
 
-const Wrapper = styled.div `
+const Wrapper = styled.header `
   background-color: #FF9A35;
 `
 

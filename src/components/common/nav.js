@@ -26,13 +26,11 @@ const StyledLink = styled(Link) `
 export default class Nav extends Component {
   	render() {
 	    return (
-	    	<nav>
-		     	<Wrapper>
-		        	<LinkWrapper><StyledLink to="/">Home</StyledLink></LinkWrapper>
-		        	<LinkWrapper><StyledLink to="/geese-info">Geese Info</StyledLink></LinkWrapper>
-		        	<LinkWrapper><StyledLink to="/quiz">Quiz</StyledLink></LinkWrapper>
-		      	</Wrapper>
-		   	</nav>
+	     	<Wrapper>
+	        	<LinkWrapper><StyledLink to="/">Home</StyledLink></LinkWrapper>
+	        	<LinkWrapper><StyledLink to="/geese-info">Geese Info</StyledLink></LinkWrapper>
+	        	<LinkWrapper><StyledLink to="/quiz">Quiz</StyledLink></LinkWrapper>
+	      	</Wrapper>
     );
   }
 }

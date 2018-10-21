@@ -17,11 +17,9 @@ const Text = styled.small `
 export default class Footer extends Component {
   	render() {
 	    return (
-	    	<div>
-		    	<Wrapper>
-			     	<Text>&#169; Beverley Newing, 2018 </Text>
-			   	</Wrapper>
-		   	</div>
+	    	<Wrapper>
+		     	<Text>&#169; Beverley Newing, 2018 </Text>
+		   	</Wrapper>
     	);
   	}
 }

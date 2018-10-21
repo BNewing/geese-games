@@ -8,10 +8,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import quizQuestions from '../../quizQuestions';
 
-const PageWrapper = styled.div `
+const PageWrapper = styled.main `
   width: 80%;
   margin: auto;
-  flex: 1;
+  flex-grow: 1;
 `
 
 const CallToActionWrapper = styled.div `
@@ -39,7 +39,7 @@ export default class GeeseInfo extends Component {
   render() {
     return (
       <DocumentTitle title="Geese Info || Geese Games">
-        <div>
+        <React.Fragment>
         	<Nav />	
         	<PageWrapper>
           	<IntroText />
@@ -50,9 +50,8 @@ export default class GeeseInfo extends Component {
              </CallToActionWrapper>
           </PageWrapper>
         <Footer />
-        </div>
+        </React.Fragment>
       </DocumentTitle>
-
     );
   }
 }

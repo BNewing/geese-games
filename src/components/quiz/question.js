@@ -61,7 +61,7 @@ export default class Question extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
                 <h2>{this.props.question.question}</h2>
                 <Image src={this.props.question.image} alt={this.props.question.quizAltText} />
                 {this.state.hasAnswered &&
@@ -81,7 +81,7 @@ export default class Question extends Component {
                 })} 
                 </List>
                 <Button onClick={this.checkAnswer}>Submit answer</Button>
-            </div>
+            </React.Fragment>
         );
     }
 }
