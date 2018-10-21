@@ -11,7 +11,7 @@ quizQuestions.sort( () => Math.random() - 0.5);
 
 const PageWrapper = styled.main`
     text-align: center;
-    flex-grow: 1;
+    flex: 1 0 auto;
 `
 
 const Button = styled.button`
@@ -87,12 +87,14 @@ export default class GeeseInfo extends Component {
     render() {
         return (
             <DocumentTitle title="Quiz || Geese Games">
-                <PageWrapper>
+                <React.Fragment>
                     <Nav />
-                    <HiddenHeader>Goose Quiz</HiddenHeader>
-                    {this.state.quizCompleted ? this.renderCompleted() : this.renderQuiz()}  
+                    <PageWrapper>    
+                        <HiddenHeader>Goose Quiz</HiddenHeader>
+                        {this.state.quizCompleted ? this.renderCompleted() : this.renderQuiz()}  
+                    </PageWrapper>
                     <Footer />
-                </PageWrapper>
+                </React.Fragment>
             </DocumentTitle>
         );
     }

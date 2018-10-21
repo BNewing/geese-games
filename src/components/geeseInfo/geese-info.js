@@ -11,7 +11,7 @@ import quizQuestions from '../../quizQuestions';
 const PageWrapper = styled.main `
   width: 80%;
   margin: auto;
-  flex-grow: 1;
+  flex: 1 0 auto;
 `
 
 const CallToActionWrapper = styled.div `

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.nav `
 	background-color: #F8E1A3;
-	height: 100%;
 	margin: 0;
 	padding: 16px;
 `

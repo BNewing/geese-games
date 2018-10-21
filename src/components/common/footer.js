@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 const Wrapper = styled.footer `
 	background-color: #F8E1A3;
-	height: 100%;
 	padding: 20px;
 	text-align: center;
 	margin-top: 2rem;
+	flex-shrink: 0;
 `
 
 const Text = styled.small `

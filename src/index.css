@@ -5,3 +5,12 @@ body {
   line-height: 1.5;
   font-family: 'Rubik';
 }
+
+html, body, #root {
+	height: 100%;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+}
