@@ -15,22 +15,11 @@ const ComponentWrapper = styled.section `
   *zoom: 1;
 `
 
-const ImageWrapper = styled.div `
-  width: 30%;
-  float: left;
-`
-
 const Image = styled.img `
   float: left;
   border-radius: 50%;
   width: 30%;
   padding: 3em 3em;
-`
-
-const TextWrapper = styled.div `
-  display: inline-block;
-  width: 60%;
-  float:right;
 `
 
 export default class InfoImageLeft extends Component {

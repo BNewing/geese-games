@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Wrapper = styled.div `	
-	width: 25%;
-	padding: 2% 4%;
-	display:inline-block;
-`
-
 const Image = styled.img `
 	width: 100%;
 	border-radius: 50%;
