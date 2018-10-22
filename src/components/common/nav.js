@@ -26,9 +26,11 @@ export default class Nav extends Component {
   	render() {
 	    return (
 	     	<Wrapper>
+		    <ul>
 	        	<LinkWrapper><StyledLink to="/">Home</StyledLink></LinkWrapper>
 	        	<LinkWrapper><StyledLink to="/geese-info">Geese Info</StyledLink></LinkWrapper>
 	        	<LinkWrapper><StyledLink to="/quiz">Quiz</StyledLink></LinkWrapper>
+		   </ul>
 	      	</Wrapper>
     );
   }
