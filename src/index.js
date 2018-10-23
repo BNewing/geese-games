@@ -15,7 +15,9 @@ export default class Root extends Component {
 				<React.Fragment>
 				<Router>
 					<Home path="/" />
-					<GeeseInfo path="/geese-info" />
+					<GeeseInfo path="/geese-info">
+						<DetailedGooseInfo path="/:url" />
+					</GeeseInfo>
 					<Quiz path="/quiz" />
 				</Router>
 
