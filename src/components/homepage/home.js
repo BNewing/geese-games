@@ -6,7 +6,7 @@ import InfoImageLeft from './info-image-left';
 import InfoImageRight from './info-image-right';
 import Footer from '../common/footer';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 
 const Wrapper = styled.main `
   margin:  0 auto;

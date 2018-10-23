@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 import styled from 'styled-components';
 
 const Image = styled.img `

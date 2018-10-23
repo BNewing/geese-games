@@ -5,7 +5,7 @@ import IntroText from './intro-text';
 import GooseBox from './goose-box';
 import Footer from '../common/footer';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 import quizQuestions from '../../quizQuestions';
 
 const PageWrapper = styled.main `

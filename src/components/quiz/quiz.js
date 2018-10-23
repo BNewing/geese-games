@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Nav from '../common/nav';
 import Footer from '../common/footer';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { Link } from "@reach/router";
 import DocumentTitle from 'react-document-title';
 import Question from './question';
 import quizQuestions from '../../quizQuestions';
