@@ -31,7 +31,7 @@ const Heading = styled.h1 `
 const DetailedList = styled.dl `
 	width: 75%;
 	margin: 2rem auto;
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
       width: 100%;
   }
 `

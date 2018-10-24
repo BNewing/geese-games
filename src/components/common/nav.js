@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Wrapper = styled.nav `
 	background-color: #F8E1A3;
 	margin: 0;
-	padding: 1rem;
+	padding: 0;
 `
 
 const LinkWrapper = styled.li `
@@ -14,6 +14,10 @@ const LinkWrapper = styled.li `
 	width: 33%;
 	text-align: center;
 	color: #817A96;
+`
+
+const ListWrapper = styled.ul `
+	padding-left: 0;
 `
 
 const StyledLink = styled(Link) `
@@ -26,11 +30,11 @@ export default class Nav extends Component {
   	render() {
 	    return (
 	     	<Wrapper>
-		    <ul>
-	        	<LinkWrapper><StyledLink to="/">Home</StyledLink></LinkWrapper>
-	        	<LinkWrapper><StyledLink to="/geese-info">Geese Info</StyledLink></LinkWrapper>
-	        	<LinkWrapper><StyledLink to="/quiz">Quiz</StyledLink></LinkWrapper>
-		   </ul>
+			    <ListWrapper>
+		        	<LinkWrapper><StyledLink to="/">Home</StyledLink></LinkWrapper>
+		        	<LinkWrapper><StyledLink to="/geese-info">Geese Info</StyledLink></LinkWrapper>
+		        	<LinkWrapper><StyledLink to="/quiz">Quiz</StyledLink></LinkWrapper>
+			   </ListWrapper>
 	      	</Wrapper>
     );
   }
