@@ -26,6 +26,14 @@ const ListItem = styled.li `
 	width: 25%;
 	padding: 2% 4%;
 	display:inline-block;
+	@media (max-width: 800px) {
+	    width: 40%;
+	    margin: auto;
+	}
+	@media (max-width: 500px) {
+	    width: 80%;
+		padding-bottom: 2rem;
+	}
 `
 
 export default class GooseBox extends Component {

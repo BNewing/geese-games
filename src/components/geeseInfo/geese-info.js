@@ -12,6 +12,9 @@ const PageWrapper = styled.main `
   width: 80%;
   margin: auto;
   flex: 1 0 auto;
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 `
 
 const CallToActionWrapper = styled.div `
