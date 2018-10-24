@@ -12,7 +12,7 @@ const Wrapper = styled.main `
   margin:  0 auto;
   width: 60%;
   flex: 1 0 auto;
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
       width: 80%;
   }
 `
@@ -37,7 +37,7 @@ const CallToActionWrapper = styled.div `
   padding: 1em;
   border-top: 0.0625rem solid #C0E6E2;
   flex-grow: 1;
-  @media (max-width: 800px) {
+  @media (max-width: 50rem) {
       margin: 0;
   }
 `

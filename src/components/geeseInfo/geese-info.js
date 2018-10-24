@@ -12,7 +12,7 @@ const PageWrapper = styled.main `
   width: 80%;
   margin: auto;
   flex: 1 0 auto;
-  @media (max-width: 700px) {
+  @media (max-width: 50rem) {
     width: 100%;
   }
 `
@@ -27,7 +27,7 @@ const CallToActionWrapper = styled.div `
 const Button = styled.button `
   font-size: 1.125rem;
   background-color: #C0E6E2;
-  margin: 5px;
+  margin: 0.25rem;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-align: center;

@@ -23,7 +23,7 @@ const ListWrapper = styled.ul `
 const StyledLink = styled(Link) `
 	text-decoration: none;
 	color: #000000;
-	font-size: 25px;
+	font-size: 1.5rem;
 `
 
 export default class Nav extends Component {
