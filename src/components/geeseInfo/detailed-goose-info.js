@@ -18,8 +18,8 @@ const Image = styled.img `
 	border-radius: 50%;
 	margin: 0 auto;
 	display: block;
-  @media (max-width: 800px) {
-      width: 80%;
+  @media (max-width: 500px) {
+      width: 75%;
   }
 `
 
