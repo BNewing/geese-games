@@ -12,6 +12,9 @@ const PageWrapper = styled.main `
   width: 80%;
   margin: auto;
   flex: 1 0 auto;
+  @media (max-width: 50rem) {
+    width: 100%;
+  }
 `
 
 const CallToActionWrapper = styled.div `
@@ -24,7 +27,7 @@ const CallToActionWrapper = styled.div `
 const Button = styled.button `
   font-size: 1.125rem;
   background-color: #C0E6E2;
-  margin: 5px;
+  margin: 0.25rem;
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -35,6 +38,10 @@ const StyledLink = styled(Link) `
   color: black;
 `
 
+const ListWrapper = styled.ul `
+  padding-left: 0;
+`
+
 export default class GeeseInfo extends Component {
   render() {
     return (
@@ -43,9 +50,9 @@ export default class GeeseInfo extends Component {
         	<Nav />	
         	<PageWrapper>
           	<IntroText />
-            <ul>
+            <ListWrapper>
               {quizQuestions.map((item,i) => <GooseBox url={i} text={item.correctAnswer} key={i} alt={item.correctAnswer} image={item.image} />)}
-        	   </ul>
+        	   </ListWrapper>
              <CallToActionWrapper>
               <p>Ready to test out your geese knowledge?</p>
               <Button><StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink></Button>

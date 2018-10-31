@@ -11,7 +11,7 @@ const Wrapper = styled.footer `
 
 const Text = styled.small `
 	text-align: center;	
-	padding: 20px;
+	padding: 1.25rem;
 `
 
 export default class Footer extends Component {

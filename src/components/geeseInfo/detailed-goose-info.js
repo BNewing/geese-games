@@ -8,6 +8,9 @@ import quizQuestions from '../../quizQuestions';
 const Wrapper = styled.div `
   margin:  0 auto;
   width: 60%;
+  @media (max-width: 50rem) {
+      width: 80%;
+  }
 `
 
 const Image = styled.img `
@@ -15,6 +18,9 @@ const Image = styled.img `
 	border-radius: 50%;
 	margin: 0 auto;
 	display: block;
+  @media (max-width: 31.25rem) {
+      width: 75%;
+  }
 `
 
 const Heading = styled.h1 `
@@ -25,6 +31,9 @@ const Heading = styled.h1 `
 const DetailedList = styled.dl `
 	width: 75%;
 	margin: 2rem auto;
+  @media (max-width: 50rem) {
+      width: 100%;
+  }
 `
 
 const DetailedListDt = styled.dt `
