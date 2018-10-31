@@ -79,7 +79,7 @@ export default class GeeseInfo extends Component {
                 <p>You got {this.state.numberCorrectAnswers} out of {this.state.quiz.length} questions right.</p>
                 <img alt="goslings running" src="https://media.giphy.com/media/jDmGFL9fHA4iA/giphy.gif" />
                 <p>Go forth and spread alllll the learning about geese</p>          
-                <Button><StyledLink to="/geese-info">Go back to the geese info page</StyledLink></Button>
+                <Button><StyledLink to={process.env.PUBLIC_URL + "/geese-info"}>Go back to the geese info page</StyledLink></Button>
             </React.Fragment>
         );
     }

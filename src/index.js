@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter } from 'react-router-dom';
 import { Router } from "@reach/router"
 import './index.css';
 import Home from './components/homepage/home';
@@ -14,11 +13,11 @@ export default class Root extends Component {
 		return (
 				<React.Fragment>
 				<Router>
-					<Home path="/" />
-					<GeeseInfo path="/geese-info">
-						<DetailedGooseInfo path="/:url" />
+					<Home path={process.env.PUBLIC_URL + "/"} />
+					<GeeseInfo path={process.env.PUBLIC_URL + "/geese-info"}>
+						<DetailedGooseInfo path={process.env.PUBLIC_URL + "/:url"} />
 					</GeeseInfo>
-					<Quiz path="/quiz" />
+					<Quiz path={process.env.PUBLIC_URL + "/quiz"} />
 				</Router>
 
 				</React.Fragment>

@@ -48,7 +48,7 @@ export default class GeeseInfo extends Component {
         	   </ul>
              <CallToActionWrapper>
               <p>Ready to test out your geese knowledge?</p>
-              <Button><StyledLink to="/quiz">Take the quiz</StyledLink></Button>
+              <Button><StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink></Button>
              </CallToActionWrapper>
           </PageWrapper>
         <Footer />

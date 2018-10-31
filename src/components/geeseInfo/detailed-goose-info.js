@@ -56,7 +56,7 @@ export default class DetailedGooseInfo extends Component {
     	<React.Fragment>
             <Nav />
             <Wrapper>
-                <Button><StyledLink to="/geese-info">&#8592; Back to all the geese</StyledLink></Button>
+                <Button><StyledLink to={process.env.PUBLIC_URL + "/geese-info"}>&#8592; Back to all the geese</StyledLink></Button>
                 <Heading>{quizQuestions[url].correctAnswer}</Heading>
                 <Image src={quizQuestions[url].image} alt={quizQuestions[url].correctAnswer}/>
                 <DetailedList>

@@ -32,7 +32,7 @@ export default class GooseBox extends Component {
   render() {
     return (
     	<ListItem>
-	      	<StyledLink to={"/goose-info/" + this.props.url}>
+	      	<StyledLink to={process.env.PUBLIC_URL + "/goose-info/" + this.props.url}>
 		        <Image src={this.props.image} alt={this.props.alt}/>
 		        <Text>{this.props.text}</Text>
 	     	</StyledLink>
