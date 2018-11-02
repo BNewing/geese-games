@@ -58,9 +58,11 @@ const StyledLink = styled(Link) `
 `
 
 export default class DetailedGooseInfo extends Component {
-
+    constructor(props){
+        super(props);
+    }
   render() {
-  	const {url} = this.props.match.params
+    const {url} = this.props.match.params.url;
     return (
     	<React.Fragment>
             <Nav />

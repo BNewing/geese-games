@@ -17,7 +17,8 @@ const LinkWrapper = styled.li `
 `
 
 const ListWrapper = styled.ul `
-	padding-left: 0;
+	padding: 1rem;
+	margin: 0;
 `
 
 const StyledLink = styled(Link) `
