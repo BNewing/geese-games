@@ -16,7 +16,7 @@ export default class Root extends Component {
 				<Router>
 					<Home path={process.env.PUBLIC_URL + "/"} />
 					<GeeseInfo path={process.env.PUBLIC_URL + "/geese-info"} />
-					<DetailedGooseInfo path={process.env.PUBLIC_URL + "/goose-info/:url"} />
+					<DetailedGooseInfo path={process.env.PUBLIC_URL + "/geese-info/:url"} />
 					<Quiz path={process.env.PUBLIC_URL + "/quiz"} />
 					<NotFound default />
 				</Router>

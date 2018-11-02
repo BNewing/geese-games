@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Nav from '../common/nav';
 import Footer from '../common/footer';
 import quizQuestions from '../../quizQuestions';
+import DocumentTitle from 'react-document-title';
 
 const Wrapper = styled.div `
   margin:  0 auto;
@@ -61,6 +62,7 @@ export default class DetailedGooseInfo extends Component {
   render() {
     const url = this.props.url;
     return (
+      <DocumentTitle title={quizQuestions[url].correctAnswer + " || Geese Games"} >
     	<React.Fragment>
             <Nav />
             <Wrapper>
@@ -80,6 +82,7 @@ export default class DetailedGooseInfo extends Component {
             </Wrapper>
             <Footer />
         </React.Fragment>
+        </DocumentTitle>
     );
   }
 }
