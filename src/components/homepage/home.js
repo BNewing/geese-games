@@ -56,7 +56,7 @@ export default class Home extends Component {
             <p>Go learn about geese and when you're ready, check out the quiz page!</p>
             <StyledLink to={process.env.PUBLIC_URL + "geese-info"}>Learn About geese</StyledLink>
             <StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink>
-            <StyledLink to="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink>
+            <StyledLink to="//webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink>
           </CallToActionWrapper>
         </Wrapper>
         <Footer />
