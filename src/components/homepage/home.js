@@ -30,6 +30,19 @@ const StyledLink = styled(Link) `
   border: 1px solid #000000;
 `
 
+const ExternalLink = styled.a `
+  font-size: 1.125rem;
+  background-color: #C0E6E2;
+  margin: 0.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+  display: inline-block;
+  border: 1px solid #000000;
+`
+
 const CallToActionWrapper = styled.div `
   text-align: center;
   margin: 3em;
@@ -56,7 +69,7 @@ export default class Home extends Component {
             <p>Go learn about geese and when you're ready, check out the quiz page!</p>
             <StyledLink to={process.env.PUBLIC_URL + "geese-info"}>Learn About geese</StyledLink>
             <StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink>
-            <StyledLink to="//webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink>
+            <ExternalLink href="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</ExternalLink>
           </CallToActionWrapper>
         </Wrapper>
         <Footer />
