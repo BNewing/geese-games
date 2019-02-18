@@ -17,18 +17,17 @@ const Wrapper = styled.main `
   }
 `
 
-const Button = styled.button `
+const StyledLink = styled(Link) `
   font-size: 1.125rem;
   background-color: #C0E6E2;
   margin: 0.25rem;
   padding: 0.75rem 1.25rem;
   border-radius: 0.5rem;
   text-align: center;
-`
-
-const StyledLink = styled(Link) `
   text-decoration: none;
   color: #000000;
+  display: inline-block;
+  border: 1px solid #000000;
 `
 
 const CallToActionWrapper = styled.div `
@@ -55,9 +54,9 @@ export default class Home extends Component {
           <CallToActionWrapper>
             <h2>What next?</h2>
             <p>Go learn about geese and when you're ready, check out the quiz page!</p>
-            <Button><StyledLink to={process.env.PUBLIC_URL + "geese-info"}>Learn About geese</StyledLink></Button>
-            <Button><StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink></Button>
-            <Button><a href="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</a></Button>
+            <StyledLink to={process.env.PUBLIC_URL + "geese-info"}>Learn About geese</StyledLink>
+            <StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink>
+            <StyledLink to="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</StyledLink>
           </CallToActionWrapper>
         </Wrapper>
         <Footer />
