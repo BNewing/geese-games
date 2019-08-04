@@ -1,5 +1,7 @@
 import CandaGoose from './images/canada.JPG';
 import GreylagGoose from './images/greylag.JPG';
+import ChineseGoose from './images/chinesegoose.jpg';
+import BarnacleGoose from './images/barnaclegoose.jpg';
 
 const quizQuestions = [
 	{
@@ -40,7 +42,7 @@ const quizQuestions = [
 	},
 	{
 		question: "What type of goose is this?",
-		image: "https://thumb1.shutterstock.com/display_pic_with_logo/518803/271545113/stock-photo-chinese-goose-closeup-in-a-poultry-farm-271545113.jpg",
+		image: `${ChineseGoose}`,
 		correctAnswer: "Chinese goose",
 		answers: ["Chinese goose", "Canada goose", "Bean goose", "Greylag goose"],
 		url: "chinese-goose",
@@ -64,7 +66,7 @@ const quizQuestions = [
 	},
 	{
 		question: "What type of goose is this?",
-		image: "https://thumb9.shutterstock.com/display_pic_with_logo/161300779/461700892/stock-photo-barnacle-goose-branta-leucopsis-barents-sea-coast-timan-tundra-russia-461700892.jpg",
+		image: `${BarnacleGoose}`,
 		correctAnswer: "Barnacle goose",
 		answers: ["Egyptian goose", "Barnacle goose", "Brent goose", "Canada goose"],
 		url: "barnacle-goose",

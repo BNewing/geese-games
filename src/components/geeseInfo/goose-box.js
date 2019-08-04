@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Image = styled.img `
 	width: 100%;
 	border-radius: 50%;
+	max-height: 20rem;
 `
 
 const Text = styled.p `
