@@ -11,6 +11,7 @@ import EmperorGoose from './images/emperorGoose.jpg';
 import HawaiianGoose from './images/Nene.jpg';
 import BarHeadedGoose from './images/barHeadedGoose.jpg';
 import RossGoose from './images/rossGoose2.jpg';
+import DomesticGoose from './images/domesticGoose.jpg';
 
 const quizQuestions = [
 	{
@@ -152,10 +153,21 @@ const quizQuestions = [
 		answers: ["Chinese goose", "Bar-headed goose", "Black spur-winged goose", "Brent goose"],
 		url: "bar-headed-goose",
 		latinName: "Anser indicus",
-		averageWeight: "",
+		averageWeight: "2-3kg",
 		quizAltText: "Latin name is Anser indicus and it weighs 2-3 kg",
 		description: "The bar-headed goose is a goose that breeds in Central Asia in colonies of thousands near mountain lakes and winters in South Asia, as far south as peninsular India. The bar-headed goose is one of the world's highest-flying birds, having been heard flying across Mount Makalu – the fifth highest mountain on earth at 8,481 m (27,825 ft) – and apparently seen over Mount Everest – 8,848 m (29,029 ft) – although this is a second-hand report with no verification."
 	},
+	{
+		question: "What type of goose is this?",
+		image: `${BarHeadedGoose}`,
+		correctAnswer: "Domestic goose",
+		answers: ["Chinese goose", "Bar-headed goose", "Domestic goose", "Brent goose"],
+		url: "domestic-goose",
+		latinName: "Anser anser domesticus",
+		averageWeight: "up to 10kg",
+		quizAltText: "Latin name is anser anser domesticus and it weighs up to 10kg",
+		description: "Domestic geese are domesticated grey geese (either greylag geese or swan geese) that are kept by humans as poultry for their meat, eggs, and down feathers since ancient times. Changes to the plumage are variable; many have been selected to lose dark brown tones of the wild bird. White geese are often preferred as they look better plucked and dressed, with any small down feathers remaining being less conspicuous. From the time of the Romans, white geese have been held in great esteem."
+	}
 ];
 
 export default quizQuestions;
