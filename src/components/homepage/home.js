@@ -67,7 +67,7 @@ export default class Home extends Component {
           <CallToActionWrapper>
             <h2>What next?</h2>
             <p>Go learn about geese and when you're ready, check out the quiz page!</p>
-            <StyledLink to={process.env.PUBLIC_URL + "geese-info"}>Learn About geese</StyledLink>
+            <StyledLink to={process.env.PUBLIC_URL + "/geese-info"}>Learn About geese</StyledLink>
             <StyledLink to={process.env.PUBLIC_URL + "/quiz"}>Take the quiz</StyledLink>
             <ExternalLink href="https://webdevbev.co.uk/blog/09-2018/building-geese-games.html">Read the tech blog post about the project</ExternalLink>
           </CallToActionWrapper>
