@@ -61,7 +61,7 @@ const quizQuestions = [
 		question: "What type of goose is this?",
 		image: `${CandaGoose}`,
 		correctAnswer: "Canada goose",
-		answers: ["Canada goose", "Greylag goose", "Barnacle goose", "Chinese goose"],
+		answers: ["Canada goose", "Greylag goose", "Barnacle goose", "Hawaiian goose"],
 		url: "canada-goose",
 		latinName: "Branta canadensis",
 		averageWeight: "4.3-5kg",
@@ -85,76 +85,76 @@ const quizQuestions = [
 		correctAnswer: "Black spur-winged goose",
 		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
 		url: "black-spur-winged-goose",
-		latinName: "",
-		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		latinName: "Plectropterus gambensis",
+		averageWeight: "4–6.8 kg",
+		quizAltText: "Latin name is plectropterus gambensis and it weights 4-6.8kg on average",
+		description: "This species often occurs in open grasslands with lakes, seasonal pools, rivers, swamps and river deltas, throughout sub-Saharan Africa. . This bird is often poisonous due to its diet of blister beetles."
 	},
 	{
 		question: "What type of goose is this?",
 		image: `${RedBreastedGoose}`,
 		correctAnswer: "Red breasted goose",
-		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		answers: ["Red breasted goose", "Canada goose", "Ross goose", "Magpie goose"],
 		url: "red-breasted-goose",
-		latinName: "",
-		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		latinName: "Branta ruficollis",
+		averageWeight: "1-1.5kg",
+		quizAltText: "Latin name is branta ruficollis and it nweights 1-1.5kg on average",
+		description: "The red-breasted goose breeds in Arctic Siberia, mainly on the Taymyr Peninsula, with smaller populations in the Gyda and Yamal peninsulas.. The red-breasted goose often nests close to nests of birds of prey, such as snowy owls, peregrine falcons and rough-legged buzzards, which helps to protect this small goose from mammalian predators such as the Arctic fox."
 	},
 	{
 		question: "What type of goose is this?",
 		image: `${MagpieGoose}`,
 		correctAnswer: "Magpie goose",
-		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		answers: ["Black spur-winged goose", "Magpie goose", "Chinese goose", "Barnacle goose"],
 		url: "magpie-goose",
-		latinName: "",
-		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		latinName: "Anseranas semipalmata",
+		averageWeight: "2-3kg",
+		quizAltText: "Latin name is Anseranas semipalmata and it weighs 2-3kg on average",
+		description: "Magpie geese are unmistakable birds with their black and white plumage and yellowish legs. The feet are only partially webbed, and the magpie goose feeds on vegetable matter in the water, as well as on land. This common waterbird is found in northern Australia and southern New Guinea."
 	},
 	{
 		question: "What type of goose is this?",
 		image: `${EmperorGoose}`,
 		correctAnswer: "Emperor goose",
-		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		answers: ["Greylag goose", "Canada goose", "Emperor goose", "Bar-headed goose"],
 		url: "emperor-goose",
-		latinName: "",
-		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		latinName: "Anser canagicus",
+		averageWeight: "2-2.5kg",
+		quizAltText: "Latin name is Anser canagicus and it weighs 2-2.5kg on average ",
+		description: "In the winter, the emperor goose lives in mudflats and coasts in Alaska and occasionally Canada and the contiguous United States. In the summer, it migrates northerly several hundred miles to arctic and sub-arctic climates, where older specimens breed monogamously. The species is an omnivore, and makes vocalizations that are more nasal than those of other geese. "
 	},
 	{
 		question: "What type of goose is this?",
 		image: `${HawaiianGoose}`,
 		correctAnswer: "Hawaiian goose",
-		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		answers: ["Brent goose", "Magpie goose", "Red-breasted goose", "Hawaiian goose"],
 		url: "hawaiian-goose",
-		latinName: "",
-		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		latinName: "Branta sandvicensis",
+		averageWeight: "8.5kg",
+		quizAltText: "Latin name is Branta sandvicensis and it weighs 8.5kg",
+		description: "The Hawaiian goose, also known as nēnē, is a species of bird endemic to the Hawaiian Islands. It is thought that the nene evolved from the Canada goose (Branta canadensis), which most likely arrived on the Hawaiian islands about 500,000 years ago, shortly after the island of Hawaiʻi was formed. The nene is the world's rarest goose.[12] It is believed that it was once common, with approximately 25,000 Hawaiian geese living in Hawaiʻi when Captain James Cook arrived in 1778. Hunting and introduced predators, such as small Asian mongooses, pigs, and cats, reduced the population to 30 birds by 1952. The nature reserve WWT Slimbridge, in England, was instrumental in the successful breeding of Hawaiian geese in captivity. Under the direction of conservationist Peter Scott, it was bred back from the brink of extinction during the 1950s for later re-introduction into the wild in Hawaiʻi. There are still Hawaiian geese at Slimbridge today. They can now be found in captivity in every WWT centre."
 	},
 	{
 		question: "What type of goose is this?",
 		image: `${RossGoose}`,
 		correctAnswer: "Ross' goose",
-		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		answers: ["Egyptian goose", "Ross' goose", "Barnacle goose", "Hawaiian goose"],
 		url: "ross-goose",
-		latinName: "",
-		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		latinName: "Anser rossii",
+		averageWeight: "1.7kg",
+		quizAltText: "Latin name is Anser rossii and it weighs 1.7kg on average",
+		description: "The Ross's goose is named in honor of Bernard R. Ross, who was associated with the Hudson’s Bay Company in Canada’s Northwest Territories. Members of the Hudson's Bay Company were the first to discover the arctic nesting grounds of Ross's geese in 1940. Before the early 1900s, this goose was considered a rare species, possibly as a consequence of open hunting, but numbers have increased dramatically as a result of conservation measures."
 	},
 	{
 		question: "What type of goose is this?",
 		image: `${BarHeadedGoose}`,
 		correctAnswer: "Bar-headed goose",
-		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		answers: ["Chinese goose", "Bar-headed goose", "Black spur-winged goose", "Brent goose"],
 		url: "bar-headed-goose",
-		latinName: "",
+		latinName: "Anser indicus",
 		averageWeight: "",
-		quizAltText: "",
-		description: ""
+		quizAltText: "Latin name is Anser indicus and it weighs 2-3 kg",
+		description: "The bar-headed goose is a goose that breeds in Central Asia in colonies of thousands near mountain lakes and winters in South Asia, as far south as peninsular India. The bar-headed goose is one of the world's highest-flying birds, having been heard flying across Mount Makalu – the fifth highest mountain on earth at 8,481 m (27,825 ft) – and apparently seen over Mount Everest – 8,848 m (29,029 ft) – although this is a second-hand report with no verification."
 	},
 ];
 
