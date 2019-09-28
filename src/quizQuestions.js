@@ -4,6 +4,13 @@ import ChineseGoose from './images/chinesegoose.jpg';
 import BarnacleGoose from './images/barnaclegoose.jpg';
 import EgyptianGoose from './images/egyptianGoose.jpg';
 import BrentGoose from './images/brentGoose.jpg';
+import BlackSpurWingedGoose from './images/blackSpurWingedGoose.jpg';
+import MagpieGoose from './images/magpieGoose.jpg';
+import RedBreastedGoose from './images/redBreastedGoose2.jpg';
+import EmperorGoose from './images/emperorGoose.jpg';
+import HawaiianGoose from './images/Nene.jpg';
+import BarHeadedGoose from './images/barHeadedGoose.jpg';
+import RossGoose from './images/rossGoose2.jpg';
 
 const quizQuestions = [
 	{
@@ -71,7 +78,84 @@ const quizQuestions = [
 		averageWeight: "1.5 to 2.25kg",
 		quizAltText: "Latin name is Alopochen aegyptiaca and it weighs 1.5 to 2.25kg",
 		description: "The Egyptian goose (Alopochen aegyptiaca) is a member of the duck, goose, and swan family Anatidae. It is native to Africa south of the Sahara and the Nile Valley. Egyptian geese were considered sacred by the Ancient Egyptians, and appeared in much of their artwork. Because of their popularity chiefly as an ornamental bird, escapees are common and feral populations have become established in Western Europe. The Egyptian goose has escaped or been deliberately released in to Florida, USA. However Egyptian geese are also now present in many parts of Central and Southeastern Texas  The Egyptian goose is believed to be most closely related to the shelducks (genus Tadorna) and their relatives, and is placed with them in the subfamily Tadorninae. "
-	}
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${BlackSpurWingedGoose}`,
+		correctAnswer: "Black spur-winged goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "black-spur-winged-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${RedBreastedGoose}`,
+		correctAnswer: "Red breasted goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "red-breasted-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${MagpieGoose}`,
+		correctAnswer: "Magpie goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "magpie-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${EmperorGoose}`,
+		correctAnswer: "Emperor goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "emperor-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${HawaiianGoose}`,
+		correctAnswer: "Hawaiian goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "hawaiian-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${RossGoose}`,
+		correctAnswer: "Ross' goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "ross-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
+	{
+		question: "What type of goose is this?",
+		image: `${BarHeadedGoose}`,
+		correctAnswer: "Bar-headed goose",
+		answers: ["Brent goose", "Egyptian goose", "Black spur-winged goose", "Bean goose"],
+		url: "bar-headed-goose",
+		latinName: "",
+		averageWeight: "",
+		quizAltText: "",
+		description: ""
+	},
 ];
 
 export default quizQuestions;
