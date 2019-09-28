@@ -159,7 +159,7 @@ const quizQuestions = [
 	},
 	{
 		question: "What type of goose is this?",
-		image: `${BarHeadedGoose}`,
+		image: `${DomesticGoose}`,
 		correctAnswer: "Domestic goose",
 		answers: ["Chinese goose", "Bar-headed goose", "Domestic goose", "Brent goose"],
 		url: "domestic-goose",
