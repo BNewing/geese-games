@@ -10,7 +10,7 @@
     "ghspa": "^1.0.0",
     "govuk-react": "^0.2.12",
     "node-mime": "^1.0.0",
-    "npm": "^6.4.1",
+    "npm": "^6.14.6",
     "react": "^16.5.2",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.5.2",
