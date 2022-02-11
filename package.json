@@ -5,7 +5,7 @@
   "homepage": "https://webdevbev.co.uk/geese-games",
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "ajv": "^6.5.4",
+    "ajv": "^6.12.3",
     "emotion": "^9.2.12",
     "ghspa": "^1.0.0",
     "govuk-react": "^0.2.12",
